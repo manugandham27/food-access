@@ -9,7 +9,7 @@ const mealInfo = {
     mealName: "Breakfast",
     subtitle: "Start your day right",
     emoji: "☀️",
-    images: ["/images/breakfast.png"],
+    images: ["./images/breakfast.png"],
     className: "morning",
   },
 
@@ -19,8 +19,8 @@ const mealInfo = {
     subtitle: "A satisfying midday meal",
     emoji: "🥗",
     images: [
-      "/images/lunch1.jpg",
-      "/images/lunch2.jpg",
+      "./images/lunch1.jpg",
+      "./images/lunch2.jpg",
     ],
     className: "afternoon",
   },
@@ -30,7 +30,7 @@ const mealInfo = {
     mealName: "Snacks",
     subtitle: "Something light for the evening",
     emoji: "☕",
-    images: ["/images/snacks.jpg"],
+    images: ["./images/snacks.jpg"],
     className: "evening",
   },
 
@@ -40,8 +40,8 @@ const mealInfo = {
     subtitle: "End your day with a good meal",
     emoji: "🌙",
     images: [
-      "/images/dinner1.jpg",
-      "/images/dinner2.jpg",
+      "./images/dinner1.jpg",
+      "./images/dinner2.jpg",
     ],
     className: "night",
   },
@@ -79,7 +79,9 @@ function getMenuFilePath(dateString, hostel, messType) {
         ? `${monthName}_${year}_veg-non-veg.json`
         : `${monthName}_${year}_special.json`;
 
-  return `/data/${folder}/${year}/${String(monthNumber).padStart(2, "0")}/${fileName}`;
+  const baseUrl = import.meta.env.BASE_URL || './';
+  const prefix = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  return `${prefix}data/${folder}/${year}/${String(monthNumber).padStart(2, "0")}/${fileName}`;
 }
 
 function getDateString(date = new Date()) {
