@@ -1,0 +1,1590 @@
+{
+  "hostel": "womens",
+  "year": 2026,
+  "month": 10,
+  "month_name": "October",
+  "mess_type": "special",
+  "menus": {
+    "2026-10-01": {
+      "day": "Thu",
+      "meals": {
+        "breakfast": [
+          "Vegetable Uttapam",
+          "Uggani",
+          "Peanut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Onion Carrot salad",
+          "Ajwain Roti",
+          "White Rice",
+          "Pachi Mirchi Papu",
+          "Dosakai sambar",
+          "Veg Pulao",
+          "Bendi Pulusu",
+          "Mix Veg Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Tomato Chutney",
+          "Gulab Jamun"
+        ],
+        "snacks": [
+          "lemon Tea + sabja",
+          "Veg Puff"
+        ],
+        "dinner": [
+          "Green Salad",
+          "Methi Roti",
+          "Plain Dosa",
+          "Peanut Chutney",
+          "White Rice",
+          "Gongura Dal",
+          "Sambar",
+          "Fish Curry (2nd week) & Fish Fry (4th Week)",
+          "Sorakaya Pesarapappu Curry",
+          "Fruit Salad",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Sweet Corn Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-02": {
+      "day": "Fri",
+      "meals": {
+        "breakfast": [
+          "Samiya Bath",
+          "Ravva Idly + Karam",
+          "Coconut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Egg Burji",
+          "Fresh Fruit Juice"
+        ],
+        "lunch": [
+          "Pasta Salad",
+          "Phulka",
+          "White Rice",
+          "Menthikura Papu",
+          "Pepper Rasam",
+          "Gongura Rice",
+          "Raw banana Poriyal",
+          "Gobi Matar Curry",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Chukka Kura Pachadi",
+          "Rasmalai"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Aloo Samosa",
+          "Tomato sause"
+        ],
+        "dinner": [
+          "Boiled Chenna Chat",
+          "Butter Roti",
+          "White Rice",
+          "Dal Makhani",
+          "Vankaya Charu",
+          "Tossed Corn Rice",
+          "Chicken Pakoda",
+          "Chilli Paneer Starter",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Manchow Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-03": {
+      "day": "Sat",
+      "meals": {
+        "breakfast": [
+          "Mysore Bonda",
+          "Wheat Upma (with veggies)",
+          "Peanut Chilli Chutney",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Ragi malt (Salt)",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Sweet Corn salad",
+          "Methi Roti",
+          "White Rice",
+          "Dal Makhani",
+          "Pachi Pulusu",
+          "Aloo Ka Tehri",
+          "Sorakaya Chenna Curry",
+          "Dondayaya Fry",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Mango Pachadi",
+          "Kalajamun"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Dahi Papdi chaat",
+          "Pudina Chutney",
+          "Sweet Tamrind Chutney",
+          "Sev+ Onion",
+          "Tomato+Chaat Masala"
+        ],
+        "dinner": [
+          "Chana with onion tomato",
+          "Ajwan Roti",
+          "White Rice",
+          "Moongdal tadka",
+          "Plain Dosa",
+          "Dal Red Chilli Chutney",
+          "Sambar",
+          "Rajma Masala Curry",
+          "Mix Veg Poriyal",
+          "Fruit Salad",
+          "Pickle",
+          "Milk, Coffee Powder",
+          "Cream of Mushroom Soup"
+        ]
+      }
+    },
+    "2026-10-04": {
+      "day": "Sun",
+      "meals": {
+        "breakfast": [
+          "Tomato Bath",
+          "Coconut Chutney",
+          "Aloo Paratha + Pickle + curd",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Vegetable Scrambled Egg",
+          "Fresh Fruit Juice",
+          "Musli",
+          "Paneer Burji"
+        ],
+        "lunch": [
+          "Onion Lemon Salad",
+          "Phulka",
+          "Thotakura Papu",
+          "Chicken gravy",
+          "Hyderabadi Chicken Dum Biryani",
+          "Hyderabadi Paneer Dum Biryani",
+          "Mirchi Ka Salan",
+          "Raita",
+          "Curd",
+          "Gongura Pachadi",
+          "Ice Cream"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Sambar Vada"
+        ],
+        "dinner": [
+          "Carrot Cucumbar",
+          "Phulka",
+          "Ragi Idly",
+          "Peanut Chutney",
+          "Sambar",
+          "White Rice",
+          "Palak dal",
+          "Bendi Poriyal",
+          "Dum Aloo Curry",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk, Coffee Powder",
+          "Clear Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-05": {
+      "day": "Mon",
+      "meals": {
+        "breakfast": [
+          "Ven Pongal ( kara pongal)",
+          "Neer Dosa",
+          "Coconut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Coriander & Chilli Omlette",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Peanut Sandals"
+        ],
+        "lunch": [
+          "Creamy Coleslaw",
+          "Missi Roti",
+          "White Rice",
+          "Tomato Dal",
+          "Drumstick Sambar",
+          "Tomato Rice",
+          "Kadai Kofta Curry",
+          "Cabbage Carrot Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Pudina tomato Chutney",
+          "Bellam Jilebi"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Veg Roll",
+          "(Onion, cabbge, capsicum & Carrot)",
+          "Sauce/Chutney"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Lacha Paratha",
+          "White Rice",
+          "Beerakai Papu",
+          "Pachi Pulusu",
+          "Pudina Rice",
+          "Gongura Chicken Curry",
+          "Palak Paneer Curry",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Spinach & Corn Soup"
+        ]
+      }
+    },
+    "2026-10-06": {
+      "day": "Tue",
+      "meals": {
+        "breakfast": [
+          "Masala Dosa",
+          "Mix VegUggani",
+          "Peanut Dry Mirchi Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Egg Pepper Fry",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Tossed Vegetable Salad (Beans, Carrot, peanuts etc...)",
+          "Methi Roti",
+          "White Rice",
+          "Gongura Dal",
+          "Mullangi Sambar",
+          "Peas Pulao",
+          "Mulakada Tomato Curry",
+          "Gobi Peas Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Beerakai Pachdi",
+          "Motichoor laddu"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Dry Maggie",
+          "(Carrot, Chilli, Beans, Coriander)"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Phulka",
+          "White Rice",
+          "Cabbage Dal",
+          "Sambaar",
+          "Kadi Masala Curry",
+          "Millet Dosa",
+          "Peanut Chutney",
+          "Fruit Salad",
+          "Pickle",
+          "Creamy of Brocoli Soup",
+          "Milk Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-07": {
+      "day": "Wed",
+      "meals": {
+        "breakfast": [
+          "Sabudana Kichidi",
+          "Moondal Chilla",
+          "Peanut Chutney",
+          "Green Chutney",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Vegetable Salad",
+          "Carrot Roti",
+          "White Rice",
+          "Bachalkura Papu",
+          "Papu Charu",
+          "Chilli Coconut Rice",
+          "Hariyali Chicken Curry",
+          "Shahi Paneer Curry",
+          "Curd",
+          "Sorakai Pachadi",
+          "Double Ka Meeta"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Mix Veg Cutlet (2 Pcs) - Med size",
+          "Tomato sause"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Ghee Roti",
+          "White Rice",
+          "Dosakai papu",
+          "Mullangi Sambar",
+          "Tomato Bath + Peanut Chutney",
+          "Bendi Do Pyaaz",
+          "Bachkula Tomato Curry",
+          "Brinjal Poriyal",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Lemon coriander Soup"
+        ]
+      }
+    },
+    "2026-10-08": {
+      "day": "Thu",
+      "meals": {
+        "breakfast": [
+          "Elluli Karam Dosa",
+          "Poha",
+          "Coconut Chutney",
+          "Vegetable Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Scrambled egg",
+          "Fresh Fruit Juice",
+          "Museli",
+          "Paneer Burji"
+        ],
+        "lunch": [
+          "Chickpea salad (Chickpeas, Cucumber, Saute tomato, Lemon)",
+          "Palak Roti",
+          "White Rice",
+          "Dosakai Tomato Papu",
+          "Chamagada Charu",
+          "Burnt Garlic chilli Jeera Rice",
+          "Aloo Brinjal Poriyal",
+          "Rajma Masala Curry",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Kobbari Pudina Pachadi",
+          "Semiya payasam"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Masala Pesara Vada",
+          "Fresh Tomato Chilli Chutney"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "carrot Roti",
+          "White Rice",
+          "Bachal Kura Papu",
+          "Sorakai Pulusu",
+          "Veg Schezwaan Noodles (Medium Spicy)",
+          "+ Chinese Sause",
+          "Clear Vegetable Soup",
+          "Guthi Vankaya Masala curry",
+          "Curd Rice",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-09": {
+      "day": "Fri",
+      "meals": {
+        "breakfast": [
+          "Vada",
+          "Vegetable dalia",
+          "Fried Channa Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Masala Omlete",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Potato Peas salad",
+          "Butter Roti",
+          "White Rice",
+          "Thotakura Papu",
+          "Mix veg Charu",
+          "Palak rice",
+          "Beerakai Tomato Curry",
+          "Cabbage Chana Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Kothimera Dosakai Pachadi",
+          "Kala Jamun"
+        ],
+        "snacks": [
+          "lemon Tea + sabja",
+          "Pani Puri"
+        ],
+        "dinner": [
+          "Onion Lemon carrot Salad",
+          "Phulka",
+          "White Rice",
+          "Dal",
+          "Kothimeera Rasam",
+          "Burnt Garlic chilli Jeera Rice",
+          "Tawa Fish Fry (1 Pc Big)",
+          "Pepper Paneer Starter",
+          "Mixed Vegetable Soup",
+          "Fruit Salad",
+          "Curd Rice+Pickle",
+          "Milk Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-10": {
+      "day": "Sat",
+      "meals": {
+        "breakfast": [
+          "Chole bhature",
+          "Mix Veg Poha",
+          "Tomato chutney",
+          "Cholle Channa Curry",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Ragi Malt (Salt)",
+          "Tea/Coffee/Milk",
+          "Egg Pepper Fry",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Cucumbar Yogurt Salad",
+          "Ghee Roti",
+          "White Rice",
+          "Moongdal tadka",
+          "Andhra Style Sambar",
+          "Mint Onion Pulao",
+          "Bendakai Masala Curry",
+          "Aloo 65",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Tomato Brinjal Pachadi",
+          "Kaja"
+        ],
+        "snacks": [
+          "Hot Chocolate",
+          "Chocolate Eggless Cake"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Betroot Chapathi",
+          "White Rice",
+          "Thotakura Papu",
+          "Bendi Pulusu",
+          "Bisi Belle Bath",
+          "(North Style (Add only veggies, carrot, beans,peas, garlic,Coriander - Consistancy Medium, )",
+          "Thorai Channa Curry",
+          "Chilli Capsicum corn Aloo poriyal",
+          "Fresh Cut Fruit",
+          "Mango Pickle",
+          "Milk, Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-11": {
+      "day": "Sun",
+      "meals": {
+        "breakfast": [
+          "Veg Kitchidi",
+          "Gobi Paratha + Pickle + Curd",
+          "Peanut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Musli",
+          "Paneer Burji"
+        ],
+        "lunch": [
+          "Onion Lemon Salad",
+          "Phulka",
+          "Pappulusu",
+          "Chicken gravy",
+          "Chicken Fry peice Biryani",
+          "Chatpata Paneer Biryani",
+          "Mirchi Ka salan",
+          "Raitha",
+          "Curd",
+          "Gongura Pachadi",
+          "Ice Cream"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Vada Pav",
+          "Fresh Tomato Chilli Chutney"
+        ],
+        "dinner": [
+          "Betroot Kheera",
+          "Palak Roti",
+          "White Rice",
+          "Tomato Dal",
+          "Mix Veg Charu",
+          "Kaju Bhagara Rice",
+          "Dondakai Garlic peanut Fry",
+          "Mix veg Kurma",
+          "Pickle",
+          "Fruit Salad",
+          "Milk, Coffee Powder",
+          "`Cream of Peas Soup"
+        ]
+      }
+    },
+    "2026-10-12": {
+      "day": "Mon",
+      "meals": {
+        "breakfast": [
+          "Semiya Bath",
+          "MasalA Dosa",
+          "Coconut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Coriander & Chilli Omlette",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Peanut Sandals"
+        ],
+        "lunch": [
+          "Cucumbar carrot Salad",
+          "Butter Roti",
+          "White Rice",
+          "Palak Dal",
+          "Kothimeera Rasam",
+          "Karvepaku karam Rice",
+          "Brinjal Tomato Curry",
+          "Chilli Jeera Aloo Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Tomato & Dosakai vankai mukkala pachadi",
+          "Rasagulla"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Soupy Mix veg Maggie (Carrot, Chilli, Beans, Coriander)"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Masala Lacha Paratha",
+          "White Rice",
+          "Yellow dal tadka",
+          "Mix veg Charu",
+          "Veg Fried Rice",
+          "Mogalai Chicken Curry",
+          "Paneer Butter Masala Curry",
+          "Beetroot Soup",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-13": {
+      "day": "Tue",
+      "meals": {
+        "breakfast": [
+          "Veg Pongal",
+          "vada",
+          "Dal Red chilli Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Kosambari Moongdal (Roasted Peanuts, Pomogranate, corriender, grated coconut)",
+          "Ghee Roti",
+          "White Rice",
+          "Dal Tadka",
+          "Vankaya Charu",
+          "Achaar Rice",
+          "Beerkai Ullipai Curry",
+          "Bendi Pakodi",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Vankai Pachadi",
+          "Ravva Kesari"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Dal Kachori",
+          "Pudina Chutney & Sweet Tamrind Chutney"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Phulka",
+          "White Rice",
+          "Sorakai Papu",
+          "Vankaya Charu",
+          "Shevige Bath",
+          "Dal Red Chilli Chutney + Sambar",
+          "Soya Kheema Curry",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Lemon coriander Soup",
+          "Milk, Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-14": {
+      "day": "Wed",
+      "meals": {
+        "breakfast": [
+          "Onion Pesarattu",
+          "Tomato Bath",
+          "Ginger Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Masala Scrambled Egg",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Vegetable Salad",
+          "Beetroot Roti",
+          "White Rice",
+          "Palak Dal",
+          "Mix veg Sambar",
+          "Vaangi bath",
+          "Kodi Iguru",
+          "Kadai Paneer Curry",
+          "Curd",
+          "Garlic Chutney",
+          "Sabudhana Payasam"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "onion Corn Samosa (Big Size)",
+          "Sauce/Chutney"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Chapathi",
+          "White Rice",
+          "Mix Veg Millet Kitchidi",
+          "Peanut Dry Chilli Chutney",
+          "Sambar",
+          "Palak dal",
+          "Guthi Vankaya Masala Curry",
+          "Artikaya Kobbari Poriyal",
+          "Fruit Salad",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Sweet Corn Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-15": {
+      "day": "Thu",
+      "meals": {
+        "breakfast": [
+          "Vegetable Uttapam",
+          "Uggani",
+          "Peanut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Onion Carrot salad",
+          "Ajwain Roti",
+          "White Rice",
+          "Pachi Mirchi Papu",
+          "Dosakai sambar",
+          "Veg Pulao",
+          "Bendi Pulusu",
+          "Mix Veg Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Tomato Chutney",
+          "Gulab Jamun"
+        ],
+        "snacks": [
+          "lemon Tea + sabja",
+          "Veg Puff"
+        ],
+        "dinner": [
+          "Green Salad",
+          "Methi Roti",
+          "Plain Dosa",
+          "Peanut Chutney",
+          "White Rice",
+          "Gongura Dal",
+          "Sambar",
+          "Fish Curry (2nd week) & Fish Fry (4th Week)",
+          "Sorakaya Pesarapappu Curry",
+          "Fruit Salad",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Sweet Corn Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-16": {
+      "day": "Fri",
+      "meals": {
+        "breakfast": [
+          "Samiya Bath",
+          "Ravva Idly + Karam",
+          "Coconut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Egg Burji",
+          "Fresh Fruit Juice"
+        ],
+        "lunch": [
+          "Pasta Salad",
+          "Phulka",
+          "White Rice",
+          "Menthikura Papu",
+          "Pepper Rasam",
+          "Gongura Rice",
+          "Raw banana Poriyal",
+          "Gobi Matar Curry",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Chukka Kura Pachadi",
+          "Rasmalai"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Aloo Samosa",
+          "Tomato sause"
+        ],
+        "dinner": [
+          "Boiled Chenna Chat",
+          "Butter Roti",
+          "White Rice",
+          "Dal Makhani",
+          "Vankaya Charu",
+          "Tossed Corn Rice",
+          "Chicken Pakoda",
+          "Chilli Paneer Starter",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Manchow Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-17": {
+      "day": "Sat",
+      "meals": {
+        "breakfast": [
+          "Mysore Bonda",
+          "Wheat Upma (with veggies)",
+          "Peanut Chilli Chutney",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Ragi malt (Salt)",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Sweet Corn salad",
+          "Methi Roti",
+          "White Rice",
+          "Dal Makhani",
+          "Pachi Pulusu",
+          "Aloo Ka Tehri",
+          "Sorakaya Chenna Curry",
+          "Dondayaya Fry",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Mango Pachadi",
+          "Kalajamun"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Dahi Papdi chaat",
+          "Pudina Chutney",
+          "Sweet Tamrind Chutney",
+          "Sev+ Onion",
+          "Tomato+Chaat Masala"
+        ],
+        "dinner": [
+          "Chana with onion tomato",
+          "Ajwan Roti",
+          "White Rice",
+          "Moongdal tadka",
+          "Plain Dosa",
+          "Dal Red Chilli Chutney",
+          "Sambar",
+          "Rajma Masala Curry",
+          "Mix Veg Poriyal",
+          "Fruit Salad",
+          "Pickle",
+          "Milk, Coffee Powder",
+          "Cream of Mushroom Soup"
+        ]
+      }
+    },
+    "2026-10-18": {
+      "day": "Sun",
+      "meals": {
+        "breakfast": [
+          "Tomato Bath",
+          "Coconut Chutney",
+          "Aloo Paratha + Pickle + curd",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Vegetable Scrambled Egg",
+          "Fresh Fruit Juice",
+          "Musli",
+          "Paneer Burji"
+        ],
+        "lunch": [
+          "Onion Lemon Salad",
+          "Phulka",
+          "Thotakura Papu",
+          "Chicken gravy",
+          "Hyderabadi Chicken Dum Biryani",
+          "Hyderabadi Paneer Dum Biryani",
+          "Mirchi Ka Salan",
+          "Raita",
+          "Curd",
+          "Gongura Pachadi",
+          "Ice Cream"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Sambar Vada"
+        ],
+        "dinner": [
+          "Carrot Cucumbar",
+          "Phulka",
+          "Ragi Idly",
+          "Peanut Chutney",
+          "Sambar",
+          "White Rice",
+          "Palak dal",
+          "Bendi Poriyal",
+          "Dum Aloo Curry",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk, Coffee Powder",
+          "Clear Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-19": {
+      "day": "Mon",
+      "meals": {
+        "breakfast": [
+          "Ven Pongal ( kara pongal)",
+          "Neer Dosa",
+          "Coconut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Coriander & Chilli Omlette",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Peanut Sandals"
+        ],
+        "lunch": [
+          "Creamy Coleslaw",
+          "Missi Roti",
+          "White Rice",
+          "Tomato Dal",
+          "Drumstick Sambar",
+          "Tomato Rice",
+          "Kadai Kofta Curry",
+          "Cabbage Carrot Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Pudina tomato Chutney",
+          "Bellam Jilebi"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Veg Roll",
+          "(Onion, cabbge, capsicum & Carrot)",
+          "Sauce/Chutney"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Lacha Paratha",
+          "White Rice",
+          "Beerakai Papu",
+          "Pachi Pulusu",
+          "Pudina Rice",
+          "Gongura Chicken Curry",
+          "Palak Paneer Curry",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Spinach & Corn Soup"
+        ]
+      }
+    },
+    "2026-10-20": {
+      "day": "Tue",
+      "meals": {
+        "breakfast": [
+          "Masala Dosa",
+          "Mix VegUggani",
+          "Peanut Dry Mirchi Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Egg Pepper Fry",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Tossed Vegetable Salad (Beans, Carrot, peanuts etc...)",
+          "Methi Roti",
+          "White Rice",
+          "Gongura Dal",
+          "Mullangi Sambar",
+          "Peas Pulao",
+          "Mulakada Tomato Curry",
+          "Gobi Peas Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Beerakai Pachdi",
+          "Motichoor laddu"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Dry Maggie",
+          "(Carrot, Chilli, Beans, Coriander)"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Phulka",
+          "White Rice",
+          "Cabbage Dal",
+          "Sambaar",
+          "Kadi Masala Curry",
+          "Millet Dosa",
+          "Peanut Chutney",
+          "Fruit Salad",
+          "Pickle",
+          "Creamy of Brocoli Soup",
+          "Milk Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-21": {
+      "day": "Wed",
+      "meals": {
+        "breakfast": [
+          "Sabudana Kichidi",
+          "Moondal Chilla",
+          "Peanut Chutney",
+          "Green Chutney",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Vegetable Salad",
+          "Carrot Roti",
+          "White Rice",
+          "Bachalkura Papu",
+          "Papu Charu",
+          "Chilli Coconut Rice",
+          "Hariyali Chicken Curry",
+          "Shahi Paneer Curry",
+          "Curd",
+          "Sorakai Pachadi",
+          "Double Ka Meeta"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Mix Veg Cutlet (2 Pcs) - Med size",
+          "Tomato sause"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Ghee Roti",
+          "White Rice",
+          "Dosakai papu",
+          "Mullangi Sambar",
+          "Tomato Bath + Peanut Chutney",
+          "Bendi Do Pyaaz",
+          "Bachkula Tomato Curry",
+          "Brinjal Poriyal",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Lemon coriander Soup"
+        ]
+      }
+    },
+    "2026-10-22": {
+      "day": "Thu",
+      "meals": {
+        "breakfast": [
+          "Elluli Karam Dosa",
+          "Poha",
+          "Coconut Chutney",
+          "Vegetable Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Scrambled egg",
+          "Fresh Fruit Juice",
+          "Museli",
+          "Paneer Burji"
+        ],
+        "lunch": [
+          "Chickpea salad (Chickpeas, Cucumber, Saute tomato, Lemon)",
+          "Palak Roti",
+          "White Rice",
+          "Dosakai Tomato Papu",
+          "Chamagada Charu",
+          "Burnt Garlic chilli Jeera Rice",
+          "Aloo Brinjal Poriyal",
+          "Rajma Masala Curry",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Kobbari Pudina Pachadi",
+          "Semiya payasam"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Masala Pesara Vada",
+          "Fresh Tomato Chilli Chutney"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "carrot Roti",
+          "White Rice",
+          "Bachal Kura Papu",
+          "Sorakai Pulusu",
+          "Veg Schezwaan Noodles (Medium Spicy)",
+          "+ Chinese Sause",
+          "Clear Vegetable Soup",
+          "Guthi Vankaya Masala curry",
+          "Curd Rice",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-23": {
+      "day": "Fri",
+      "meals": {
+        "breakfast": [
+          "Vada",
+          "Vegetable dalia",
+          "Fried Channa Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Masala Omlete",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Potato Peas salad",
+          "Butter Roti",
+          "White Rice",
+          "Thotakura Papu",
+          "Mix veg Charu",
+          "Palak rice",
+          "Beerakai Tomato Curry",
+          "Cabbage Chana Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Kothimera Dosakai Pachadi",
+          "Kala Jamun"
+        ],
+        "snacks": [
+          "lemon Tea + sabja",
+          "Pani Puri"
+        ],
+        "dinner": [
+          "Onion Lemon carrot Salad",
+          "Phulka",
+          "White Rice",
+          "Dal",
+          "Kothimeera Rasam",
+          "Burnt Garlic chilli Jeera Rice",
+          "Tawa Fish Fry (1 Pc Big)",
+          "Pepper Paneer Starter",
+          "Mixed Vegetable Soup",
+          "Fruit Salad",
+          "Curd Rice+Pickle",
+          "Milk Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-24": {
+      "day": "Sat",
+      "meals": {
+        "breakfast": [
+          "Mysore Bonda",
+          "Wheat Upma (with veggies)",
+          "Peanut Chilli Chutney",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Ragi malt (Salt)",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Sweet Corn salad",
+          "Methi Roti",
+          "White Rice",
+          "Dal Makhani",
+          "Pachi Pulusu",
+          "Aloo Ka Tehri",
+          "Sorakaya Chenna Curry",
+          "Dondayaya Fry",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Mango Pachadi",
+          "Kalajamun"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Dahi Papdi chaat",
+          "Pudina Chutney",
+          "Sweet Tamrind Chutney",
+          "Sev+ Onion",
+          "Tomato+Chaat Masala"
+        ],
+        "dinner": [
+          "Chana with onion tomato",
+          "Ajwan Roti",
+          "White Rice",
+          "Moongdal tadka",
+          "Plain Dosa",
+          "Dal Red Chilli Chutney",
+          "Sambar",
+          "Rajma Masala Curry",
+          "Mix Veg Poriyal",
+          "Fruit Salad",
+          "Pickle",
+          "Milk, Coffee Powder",
+          "Cream of Mushroom Soup"
+        ]
+      }
+    },
+    "2026-10-25": {
+      "day": "Sun",
+      "meals": {
+        "breakfast": [
+          "Veg Kitchidi",
+          "Gobi Paratha + Pickle + Curd",
+          "Peanut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Musli",
+          "Paneer Burji"
+        ],
+        "lunch": [
+          "Onion Lemon Salad",
+          "Phulka",
+          "Pappulusu",
+          "Chicken gravy",
+          "Chicken Fry peice Biryani",
+          "Chatpata Paneer Biryani",
+          "Mirchi Ka salan",
+          "Raitha",
+          "Curd",
+          "Gongura Pachadi",
+          "Ice Cream"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Vada Pav",
+          "Fresh Tomato Chilli Chutney"
+        ],
+        "dinner": [
+          "Betroot Kheera",
+          "Palak Roti",
+          "White Rice",
+          "Tomato Dal",
+          "Mix Veg Charu",
+          "Kaju Bhagara Rice",
+          "Dondakai Garlic peanut Fry",
+          "Mix veg Kurma",
+          "Pickle",
+          "Fruit Salad",
+          "Milk, Coffee Powder",
+          "`Cream of Peas Soup"
+        ]
+      }
+    },
+    "2026-10-26": {
+      "day": "Mon",
+      "meals": {
+        "breakfast": [
+          "Semiya Bath",
+          "MasalA Dosa",
+          "Coconut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Coriander & Chilli Omlette",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Peanut Sandals"
+        ],
+        "lunch": [
+          "Cucumbar carrot Salad",
+          "Butter Roti",
+          "White Rice",
+          "Palak Dal",
+          "Kothimeera Rasam",
+          "Karvepaku karam Rice",
+          "Brinjal Tomato Curry",
+          "Chilli Jeera Aloo Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Tomato & Dosakai vankai mukkala pachadi",
+          "Rasagulla"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Soupy Mix veg Maggie (Carrot, Chilli, Beans, Coriander)"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Masala Lacha Paratha",
+          "White Rice",
+          "Yellow dal tadka",
+          "Mix veg Charu",
+          "Veg Fried Rice",
+          "Mogalai Chicken Curry",
+          "Paneer Butter Masala Curry",
+          "Beetroot Soup",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-27": {
+      "day": "Tue",
+      "meals": {
+        "breakfast": [
+          "Veg Pongal",
+          "vada",
+          "Dal Red chilli Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Kosambari Moongdal (Roasted Peanuts, Pomogranate, corriender, grated coconut)",
+          "Ghee Roti",
+          "White Rice",
+          "Dal Tadka",
+          "Vankaya Charu",
+          "Achaar Rice",
+          "Beerkai Ullipai Curry",
+          "Bendi Pakodi",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Vankai Pachadi",
+          "Ravva Kesari"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Dal Kachori",
+          "Pudina Chutney & Sweet Tamrind Chutney"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Phulka",
+          "White Rice",
+          "Sorakai Papu",
+          "Vankaya Charu",
+          "Shevige Bath",
+          "Dal Red Chilli Chutney + Sambar",
+          "Soya Kheema Curry",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Lemon coriander Soup",
+          "Milk, Coffee Powder"
+        ]
+      }
+    },
+    "2026-10-28": {
+      "day": "Wed",
+      "meals": {
+        "breakfast": [
+          "Onion Pesarattu",
+          "Tomato Bath",
+          "Ginger Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Masala Scrambled Egg",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Vegetable Salad",
+          "Beetroot Roti",
+          "White Rice",
+          "Palak Dal",
+          "Mix veg Sambar",
+          "Vaangi bath",
+          "Kodi Iguru",
+          "Kadai Paneer Curry",
+          "Curd",
+          "Garlic Chutney",
+          "Sabudhana Payasam"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "onion Corn Samosa (Big Size)",
+          "Sauce/Chutney"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Chapathi",
+          "White Rice",
+          "Mix Veg Millet Kitchidi",
+          "Peanut Dry Chilli Chutney",
+          "Sambar",
+          "Palak dal",
+          "Guthi Vankaya Masala Curry",
+          "Artikaya Kobbari Poriyal",
+          "Fruit Salad",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Sweet Corn Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-29": {
+      "day": "Thu",
+      "meals": {
+        "breakfast": [
+          "Vegetable Uttapam",
+          "Uggani",
+          "Peanut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Boiled Egg",
+          "Fresh Fruit Juice",
+          "Corn Flakes",
+          "Boiled Paneer Cubes"
+        ],
+        "lunch": [
+          "Onion Carrot salad",
+          "Ajwain Roti",
+          "White Rice",
+          "Pachi Mirchi Papu",
+          "Dosakai sambar",
+          "Veg Pulao",
+          "Bendi Pulusu",
+          "Mix Veg Poriyal",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Tomato Chutney",
+          "Gulab Jamun"
+        ],
+        "snacks": [
+          "lemon Tea + sabja",
+          "Veg Puff"
+        ],
+        "dinner": [
+          "Green Salad",
+          "Methi Roti",
+          "Plain Dosa",
+          "Peanut Chutney",
+          "White Rice",
+          "Gongura Dal",
+          "Sambar",
+          "Fish Curry (2nd week) & Fish Fry (4th Week)",
+          "Sorakaya Pesarapappu Curry",
+          "Fruit Salad",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Sweet Corn Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-30": {
+      "day": "Fri",
+      "meals": {
+        "breakfast": [
+          "Samiya Bath",
+          "Ravva Idly + Karam",
+          "Coconut Chutney",
+          "Sambar",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Tea/Coffee/Milk",
+          "Egg Burji",
+          "Fresh Fruit Juice"
+        ],
+        "lunch": [
+          "Pasta Salad",
+          "Phulka",
+          "White Rice",
+          "Menthikura Papu",
+          "Pepper Rasam",
+          "Gongura Rice",
+          "Raw banana Poriyal",
+          "Gobi Matar Curry",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Chukka Kura Pachadi",
+          "Rasmalai"
+        ],
+        "snacks": [
+          "Tea/Coffee/Milk",
+          "Aloo Samosa",
+          "Tomato sause"
+        ],
+        "dinner": [
+          "Boiled Chenna Chat",
+          "Butter Roti",
+          "White Rice",
+          "Dal Makhani",
+          "Vankaya Charu",
+          "Tossed Corn Rice",
+          "Chicken Pakoda",
+          "Chilli Paneer Starter",
+          "Fresh Cut Fruit",
+          "Pickle",
+          "Milk Coffee Powder",
+          "Manchow Vegetable Soup"
+        ]
+      }
+    },
+    "2026-10-31": {
+      "day": "Sat",
+      "meals": {
+        "breakfast": [
+          "Chole bhature",
+          "Mix Veg Poha",
+          "Tomato chutney",
+          "Cholle Channa Curry",
+          "Bread + Butter + Jam",
+          "Sprouts (1 small cup)",
+          "Ragi Malt (Salt)",
+          "Tea/Coffee/Milk",
+          "Egg Pepper Fry",
+          "Fresh Fruit Juice",
+          "Chocos",
+          "Boiled Chick Peas"
+        ],
+        "lunch": [
+          "Cucumbar Yogurt Salad",
+          "Ghee Roti",
+          "White Rice",
+          "Moongdal tadka",
+          "Andhra Style Sambar",
+          "Mint Onion Pulao",
+          "Bendakai Masala Curry",
+          "Aloo 65",
+          "Chips/Fryums/Papad",
+          "Curd",
+          "Tomato Brinjal Pachadi",
+          "Kaja"
+        ],
+        "snacks": [
+          "Hot Chocolate",
+          "Chocolate Eggless Cake"
+        ],
+        "dinner": [
+          "Vegetable Salad",
+          "Betroot Chapathi",
+          "White Rice",
+          "Thotakura Papu",
+          "Bendi Pulusu",
+          "Bisi Belle Bath",
+          "(North Style (Add only veggies, carrot, beans,peas, garlic,Coriander - Consistancy Medium, )",
+          "Thorai Channa Curry",
+          "Chilli Capsicum corn Aloo poriyal",
+          "Fresh Cut Fruit",
+          "Mango Pickle",
+          "Milk, Coffee Powder"
+        ]
+      }
+    }
+  }
+}
