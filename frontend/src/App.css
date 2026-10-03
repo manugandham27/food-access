@@ -1,0 +1,4517 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #171717;
+  background: #fffaf4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --page-bg: #fffaf4;
+  --surface: #ffffff;
+  --surface-soft: #f8f3ed;
+  --text: #171717;
+  --muted: #706861;
+  --soft-text: #958b82;
+  --border: rgba(30, 20, 10, 0.08);
+  --header-bg: rgba(255, 250, 244, 0.92);
+  --shadow: rgba(30, 20, 10, 0.11);
+}
+
+:root[data-theme="dark"] {
+  --page-bg: #111114;
+  --surface: #1c1c21;
+  --surface-soft: #24242a;
+  --text: #f5f1eb;
+  --muted: #aaa4a0;
+  --soft-text: #a9a19a;
+  --border: rgba(255, 255, 255, 0.09);
+  --header-bg: rgba(17, 17, 20, 0.94);
+  --shadow: rgba(0, 0, 0, 0.38);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--page-bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.hero-small-text {
+  color: #f26b38;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+}
+
+.theme-toggle {
+  width: 41px;
+  height: 41px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  box-shadow: 0 7px 22px var(--shadow);
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) rotate(8deg);
+}
+
+.back-button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 7px 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.back-button:hover {
+  color: var(--text);
+}
+
+/* =========================================================
+   HOSTEL SCREEN
+   ========================================================= */
+
+.top-bar {
+  width: 100%;
+  padding: 20px 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border-radius: 100px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 7px 22px var(--shadow);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.hero-screen {
+  min-height: calc(100vh - 82px);
+  padding: 25px 5vw 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  width: min(1050px, 100%);
+}
+
+.hero-content h1,
+.selection-heading h1,
+.date-heading h1 {
+  margin: 9px 0 15px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 4.3vw, 55px);
+  line-height: 0.98;
+  letter-spacing: -1.6px;
+  color: var(--text);
+}
+
+.hero-content h1 span,
+.selection-heading h1 span,
+.date-heading h1 span {
+  color: #f26b38;
+}
+
+.hero-content > p,
+.selection-heading > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.hostel-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+  margin-top: 32px;
+}
+
+.hostel-card {
+  position: relative;
+  min-height: 200px;
+  padding: 23px;
+  border: 0;
+  border-radius: 25px;
+  text-align: left;
+  overflow: hidden;
+  color: #ffffff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hostel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
+}
+
+.mens-card {
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, 0.25),
+      transparent 25%
+    ),
+    linear-gradient(135deg, #ef6c35, #f19b42);
+}
+
+.womens-card {
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, 0.2),
+      transparent 25%
+    ),
+    linear-gradient(135deg, #7771d5, #b06bd1);
+  opacity: 0.62;
+}
+
+.hostel-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.card-eyebrow {
+  display: block;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.hostel-card h2 {
+  margin: 0 0 7px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+.hostel-card p {
+  margin: 0;
+  max-width: 330px;
+  font-size: 12px;
+  line-height: 1.55;
+  opacity: 0.86;
+}
+
+.card-arrow {
+  position: absolute;
+  right: 21px;
+  bottom: 19px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 17px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  padding: 20px 5vw 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  color: var(--soft-text);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+/* =========================================================
+   MESS SELECTION
+   ========================================================= */
+
+.selection-topbar {
+  padding: 20px 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selection-screen {
+  width: min(1050px, 90%);
+  margin: 0 auto;
+  padding: 30px 0 55px;
+}
+
+.selection-heading h1 {
+  font-size: clamp(38px, 4.3vw, 53px);
+}
+
+.mess-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.mess-card {
+  min-height: 295px;
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 27px;
+  text-align: left;
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: 0 13px 38px var(--shadow);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.mess-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 50px var(--shadow);
+}
+
+.veg-card {
+  background:
+    linear-gradient(
+      145deg,
+      var(--surface),
+      rgba(117, 171, 84, 0.12)
+    );
+}
+
+.special-card {
+  background:
+    linear-gradient(
+      145deg,
+      var(--surface),
+      rgba(237, 124, 82, 0.12)
+    );
+}
+
+.mess-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mess-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: var(--surface-soft);
+  font-size: 27px;
+}
+
+.mess-card-arrow {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--surface-soft);
+  font-size: 17px;
+}
+
+.mess-card-content {
+  margin-top: 58px;
+}
+
+.mess-card h2 {
+  margin: 0 0 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+}
+
+.mess-card p {
+  max-width: 430px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MENU HEADER
+   ========================================================= */
+
+.menu-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 70px;
+  padding: 12px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+}
+
+.menu-header-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.menu-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 1.1px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-mess {
+  padding: 8px 13px;
+  border-radius: 100px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   MESS TYPE SWITCHER
+   ========================================================= */
+
+.mess-type-switcher {
+  position: relative;
+}
+
+.mess-type-button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 6px 18px var(--shadow);
+  font-size: 10px;
+  font-weight: 800;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.mess-type-button:hover {
+  transform: translateY(-1px);
+}
+
+.mess-type-icon {
+  font-size: 14px;
+}
+
+.mess-type-label {
+  white-space: nowrap;
+}
+
+.mess-type-chevron {
+  color: var(--soft-text);
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* Desktop hover menu */
+.mess-type-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 50;
+  min-width: 175px;
+  padding: 6px;
+  display: none;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 0 14px 35px var(--shadow);
+}
+
+.mess-type-switcher:hover .mess-type-menu,
+.mess-type-switcher:focus-within .mess-type-menu {
+  display: grid;
+  gap: 3px;
+}
+
+.mess-type-menu button {
+  border: 0;
+  border-radius: 10px;
+  padding: 9px 10px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.mess-type-menu button:hover {
+  background: var(--surface-soft);
+}
+
+/* =========================================================
+   MENU PAGE
+   ========================================================= */
+
+.menu-page {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 38px 0 45px;
+}
+
+.date-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.date-heading h1 {
+  margin: 7px 0 0;
+  font-size: clamp(37px, 4vw, 52px);
+  line-height: 0.98;
+  letter-spacing: -1.5px;
+}
+
+.date-heading .hero-small-text {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   DATE CONTROLS
+   ========================================================= */
+
+.date-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.date-nav {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.date-display {
+  min-width: 225px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 15px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.date-calendar-icon {
+  font-size: 19px;
+}
+
+.date-display small {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--soft-text);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.date-display strong {
+  display: block;
+  color: var(--text);
+  font-size: 11px;
+}
+
+.date-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.today-button {
+  border: 0;
+  border-radius: 100px;
+  padding: 10px 15px;
+  background: #f26b38;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  box-shadow: 0 7px 18px rgba(242, 107, 56, 0.2);
+}
+
+.today-button.active {
+  background: #2f9e5b;
+}
+
+.date-picker-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 11px;
+  border-radius: 100px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--soft-text);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.date-picker-wrapper input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 10px;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status-section {
+  margin-top: 23px;
+}
+
+.menu-status {
+  min-height: 61px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 18px;
+  border-radius: 17px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 9px 27px var(--shadow);
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.status-dot.live {
+  background: #35b765;
+  box-shadow: 0 0 0 4px rgba(53, 183, 101, 0.13);
+}
+
+.status-dot.manual {
+  background: #8b8178;
+}
+
+.status-left strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 9px;
+  letter-spacing: 0.9px;
+}
+
+.status-left span {
+  display: block;
+  color: var(--soft-text);
+  font-size: 9px;
+}
+
+.status-meal {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   MEAL TABS
+   ========================================================= */
+
+.meal-navigation {
+  margin-top: 16px;
+}
+
+.meal-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.meal-tab {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 58px;
+  padding: 8px 13px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  box-shadow: 0 5px 17px var(--shadow);
+}
+
+.meal-tab > span {
+  font-size: 18px;
+}
+
+.meal-tab strong {
+  display: block;
+  font-size: 10px;
+}
+
+.meal-tab small {
+  display: block;
+  margin-top: 2px;
+  color: var(--soft-text);
+  font-size: 8px;
+}
+
+.meal-tab.active.morning {
+  background: #fff0df;
+  border-color: #f2a55f;
+}
+
+.meal-tab.active.afternoon {
+  background: #eaf6df;
+  border-color: #83b85e;
+}
+
+.meal-tab.active.evening {
+  background: #ffe8ee;
+  border-color: #dc7d9e;
+}
+
+.meal-tab.active.night {
+  background: #e9e9ff;
+  border-color: #8582db;
+}
+
+/* =========================================================
+   MEAL SLIDER
+   ========================================================= */
+
+.meal-slider-wrapper {
+  position: relative;
+  padding: 17px 44px 37px;
+  touch-action: pan-y;
+}
+
+.meal-slider {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 28px;
+  touch-action: pan-y;
+  box-shadow: 0 16px 40px var(--shadow);
+}
+
+.meal-section {
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  overflow: hidden;
+}
+
+/*
+  Breakfast:
+  FOOD LEFT | IMAGE RIGHT
+
+  Lunch:
+  IMAGE LEFT | FOOD RIGHT
+
+  Snacks:
+  FOOD LEFT | IMAGE RIGHT
+
+  Dinner:
+  IMAGE LEFT | FOOD RIGHT
+*/
+
+.meal-section.morning {
+  background: linear-gradient(135deg, #fff1df, #ffd9b3);
+}
+
+.meal-section.afternoon {
+  background: linear-gradient(135deg, #edf8e4, #d7efb9);
+}
+
+.meal-section.evening {
+  background: linear-gradient(135deg, #ffe6ec, #e7d8f3);
+}
+
+.meal-section.night {
+  background: linear-gradient(135deg, #e3e9ff, #d8d7f7);
+}
+
+/* =========================================================
+   MEAL CONTENT
+   ========================================================= */
+
+.meal-content {
+  padding: 34px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.meal-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.meal-emoji {
+  font-size: 16px;
+}
+
+.meal-content h2 {
+  margin: 2px 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(29px, 3vw, 40px);
+  line-height: 1;
+  color: #201a16;
+}
+
+.meal-subtitle {
+  margin: 8px 0 19px;
+  color: #71675f;
+  font-size: 11px;
+}
+
+/*
+  Increased food item size.
+  This is the main readability change.
+*/
+
+.food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.food-item {
+  display: grid;
+  grid-template-columns: 25px 14px 1fr;
+  align-items: center;
+  min-height: 31px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(30, 20, 10, 0.08);
+}
+
+.food-number {
+  color: #9c8e82;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.food-dot {
+  color: #9c8e82;
+  font-size: 10px;
+}
+
+.food-name {
+  color: #211c18;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.no-items {
+  color: #81776f;
+  font-size: 13px;
+}
+
+/* =========================================================
+   IMAGE AREA
+   ========================================================= */
+
+.meal-image-wrapper {
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+}
+
+.meal-images {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 5px;
+}
+
+.meal-images.single-image {
+  grid-template-columns: 1fr;
+}
+
+.meal-images.multiple-images {
+  grid-template-columns: 1fr 1fr;
+}
+
+.meal-image {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  display: block;
+  object-fit: cover;
+}
+
+.image-fallback {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 255, 255, 0.5),
+      transparent 45%
+    );
+}
+
+.image-fallback-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.image-fallback-content span {
+  font-size: 55px;
+}
+
+.image-fallback-content p {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+/* =========================================================
+   SLIDER ARROWS
+   ========================================================= */
+
+.meal-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 7px 22px var(--shadow);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.meal-arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+
+.meal-arrow-left {
+  left: 0;
+}
+
+.meal-arrow-right {
+  right: 0;
+}
+
+/* =========================================================
+   DOTS
+   ========================================================= */
+
+.meal-dots {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meal-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c5bbb2;
+}
+
+.meal-dot.active {
+  width: 20px;
+  border-radius: 10px;
+  background: #f26b38;
+}
+
+.swipe-hint {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--soft-text);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   EMPTY MENU
+   ========================================================= */
+
+.empty-menu {
+  margin: 25px 0;
+  padding: 55px 25px;
+  border-radius: 27px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 11px 32px var(--shadow);
+  text-align: center;
+  color: var(--text);
+}
+
+.empty-icon {
+  margin-bottom: 13px;
+  font-size: 48px;
+}
+
+.empty-menu h2 {
+  margin: 0 0 9px;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+}
+
+.empty-menu p {
+  margin: 0 auto 22px;
+  max-width: 450px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+:root[data-theme="dark"] .hero-content h1,
+:root[data-theme="dark"] .selection-heading h1,
+:root[data-theme="dark"] .date-heading h1,
+:root[data-theme="dark"] .meal-content h2,
+:root[data-theme="dark"] .empty-menu h2 {
+  color: #f5f1eb;
+}
+
+:root[data-theme="dark"] .meal-section.morning {
+  background: linear-gradient(135deg, #3a271b, #51321e);
+}
+
+:root[data-theme="dark"] .meal-section.afternoon {
+  background: linear-gradient(135deg, #1e3322, #294329);
+}
+
+:root[data-theme="dark"] .meal-section.evening {
+  background: linear-gradient(135deg, #38202d, #30243f);
+}
+
+:root[data-theme="dark"] .meal-section.night {
+  background: linear-gradient(135deg, #1c2542, #252d55);
+}
+
+:root[data-theme="dark"] .meal-tab.active.morning {
+  background: #3a271b;
+  border-color: #d98a45;
+}
+
+:root[data-theme="dark"] .meal-tab.active.afternoon {
+  background: #1e3322;
+  border-color: #76a956;
+}
+
+:root[data-theme="dark"] .meal-tab.active.evening {
+  background: #38202d;
+  border-color: #c76d91;
+}
+
+:root[data-theme="dark"] .meal-tab.active.night {
+  background: #1c2542;
+  border-color: #7771d5;
+}
+
+:root[data-theme="dark"] .meal-content h2,
+:root[data-theme="dark"] .food-name {
+  color: #f5f1eb;
+}
+
+:root[data-theme="dark"] .meal-label,
+:root[data-theme="dark"] .meal-subtitle {
+  color: #b8b0a9;
+}
+
+:root[data-theme="dark"] .food-item {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] .food-number,
+:root[data-theme="dark"] .food-dot {
+  color: #aaa29b;
+}
+
+:root[data-theme="dark"] .no-items {
+  color: #b1aaa4;
+}
+
+:root[data-theme="dark"] .menu-status,
+:root[data-theme="dark"] .date-display,
+:root[data-theme="dark"] .date-nav,
+:root[data-theme="dark"] .date-picker-wrapper,
+:root[data-theme="dark"] .meal-arrow,
+:root[data-theme="dark"] .meal-tab,
+:root[data-theme="dark"] .empty-menu,
+:root[data-theme="dark"] .header-mess,
+:root[data-theme="dark"] .brand-badge {
+  background: var(--surface);
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .date-display strong {
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .date-picker-wrapper input {
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .empty-menu p {
+  color: var(--muted);
+}
+
+:root[data-theme="dark"] .mess-card {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme="dark"] .veg-card {
+  background:
+    linear-gradient(
+      145deg,
+      #1c1c21,
+      #203323
+    );
+}
+
+:root[data-theme="dark"] .special-card {
+  background:
+    linear-gradient(
+      145deg,
+      #1c1c21,
+      #35242a
+    );
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .date-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date-controls {
+    width: 100%;
+  }
+
+  .date-display {
+    flex: 1;
+  }
+
+  .meal-content {
+    padding: 30px;
+  }
+
+  .food-name {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .mess-type-button {
+    min-height: 35px;
+    padding: 6px 9px;
+    font-size: 9px;
+  }
+
+  .mess-type-menu {
+    display: none !important;
+  }
+
+  .mess-type-label {
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  .hostel-cards,
+  .mess-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-screen {
+    align-items: flex-start;
+    padding-top: 25px;
+  }
+
+  .hostel-card {
+    min-height: 190px;
+  }
+
+  .mess-card {
+    min-height: 280px;
+  }
+
+  .mess-card-content {
+    margin-top: 45px;
+  }
+
+  .meal-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meal-section {
+    grid-template-columns: 1fr;
+  }
+
+  .meal-content {
+    order: 1;
+  }
+
+  .meal-image-wrapper {
+    order: 2;
+    min-height: 220px;
+  }
+
+  .meal-image {
+    min-height: 220px;
+  }
+
+  .image-fallback {
+    min-height: 220px;
+  }
+
+  .menu-header-left {
+    gap: 12px;
+  }
+
+  .menu-brand {
+    font-size: 11px;
+  }
+
+  .header-mess {
+    display: none;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .top-bar,
+  .selection-topbar {
+    padding: 16px 20px;
+  }
+
+  .theme-toggle {
+    width: 39px;
+    height: 39px;
+    font-size: 15px;
+  }
+
+  .hero-screen {
+    padding: 22px 20px 40px;
+  }
+
+  .hero-content h1,
+  .selection-heading h1,
+  .date-heading h1 {
+    font-size: 37px;
+    letter-spacing: -1.2px;
+  }
+
+  .hero-content > p,
+  .selection-heading > p {
+    font-size: 13px;
+  }
+
+  .hostel-cards {
+    margin-top: 30px;
+  }
+
+  .hostel-card {
+    min-height: 180px;
+    padding: 21px;
+    border-radius: 23px;
+  }
+
+  .hostel-card h2 {
+    font-size: 23px;
+  }
+
+  .selection-screen {
+    width: calc(100% - 40px);
+    padding: 23px 0 45px;
+  }
+
+  .mess-cards {
+    margin-top: 30px;
+  }
+
+  .mess-card {
+    min-height: 255px;
+    padding: 21px;
+    border-radius: 23px;
+  }
+
+  .mess-card h2 {
+    font-size: 27px;
+  }
+
+  .mess-card-content {
+    margin-top: 40px;
+  }
+
+  .menu-header {
+    padding: 11px 20px;
+  }
+
+  .menu-header-left .back-button {
+    font-size: 11px;
+  }
+
+  .menu-page {
+    width: calc(100% - 30px);
+    padding: 28px 0 40px;
+  }
+
+  .date-section {
+    gap: 20px;
+  }
+
+  .date-heading h1 {
+    font-size: 36px;
+  }
+
+  .date-controls {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .date-nav {
+    width: 37px;
+    height: 37px;
+  }
+
+  .date-display {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 9px;
+  }
+
+  .date-display strong {
+    font-size: 9px;
+  }
+
+  .date-actions {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 13px;
+  }
+
+  .today-button {
+    width: 100%;
+  }
+
+  .date-picker-wrapper {
+    justify-content: space-between;
+  }
+
+  .status-section {
+    margin-top: 18px;
+  }
+
+  .menu-status {
+    min-height: 56px;
+    padding: 10px 12px;
+  }
+
+  .status-left span {
+    max-width: 180px;
+  }
+
+  .status-meal {
+    font-size: 9px;
+  }
+
+  .meal-navigation {
+    margin-top: 13px;
+  }
+
+  .meal-tabs {
+    gap: 6px;
+  }
+
+  .meal-tab {
+    min-height: 53px;
+    padding: 7px 9px;
+    border-radius: 13px;
+  }
+
+  .meal-tab > span {
+    font-size: 15px;
+  }
+
+  .meal-tab strong {
+    font-size: 9px;
+  }
+
+  .meal-tab small {
+    font-size: 7px;
+  }
+
+  .meal-slider-wrapper {
+    padding: 0 4px 39px;
+    margin-top: 14px;
+  }
+
+  .meal-slider {
+    border-radius: 22px;
+  }
+
+  .meal-section {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .meal-content {
+    padding: 29px 22px;
+  }
+
+  .meal-content h2 {
+    font-size: 32px;
+  }
+
+  .meal-subtitle {
+    font-size: 10px;
+    margin-bottom: 17px;
+  }
+
+  .food-list {
+    gap: 6px;
+  }
+
+  .food-item {
+    min-height: 28px;
+    grid-template-columns: 23px 12px 1fr;
+  }
+
+  .food-name {
+    font-size: 13px;
+  }
+
+  .food-number {
+    font-size: 8px;
+  }
+
+  .meal-image-wrapper {
+    min-height: 205px;
+  }
+
+  .meal-images.multiple-images {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .meal-image {
+    min-height: 205px;
+  }
+
+  .image-fallback {
+    min-height: 205px;
+  }
+
+  .meal-arrow {
+    width: 33px;
+    height: 33px;
+    font-size: 15px;
+  }
+
+  .meal-arrow-left {
+    left: 8px;
+  }
+
+  .meal-arrow-right {
+    right: 8px;
+  }
+
+  .swipe-hint {
+    font-size: 7px;
+  }
+
+  .empty-menu {
+    padding: 43px 18px;
+  }
+
+  .footer {
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .hero-content h1,
+  .selection-heading h1,
+  .date-heading h1 {
+    font-size: 34px;
+  }
+
+  .meal-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .meal-content {
+    padding: 27px 19px;
+  }
+
+  .meal-content h2 {
+    font-size: 30px;
+  }
+
+  .food-name {
+    font-size: 12px;
+  }
+
+  .meal-image-wrapper,
+  .meal-image,
+  .image-fallback {
+    min-height: 180px;
+  }
+}
+
+/* =========================================================
+   MESSMATE FINAL LAYOUT
+   - Desktop/laptop: compact two-table layout with image beside food
+   - Mobile: same side-by-side concept, smaller text/images
+   - Mobile-only changes are below 720px
+   ========================================================= */
+
+/* -------------------------
+   DESKTOP / LAPTOP
+   ------------------------- */
+
+.meal-section {
+  min-height: 390px;
+}
+
+.meal-content {
+  padding: 24px 28px;
+  justify-content: center;
+}
+
+.meal-content h2 {
+  font-size: clamp(28px, 2.5vw, 34px);
+  margin-top: 1px;
+}
+
+.meal-subtitle {
+  margin: 5px 0 12px;
+  font-size: 10px;
+}
+
+/* Two compact food tables */
+.food-tables {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.food-table {
+  min-width: 0;
+  border-top: 1px solid rgba(30, 20, 10, 0.10);
+}
+
+.food-item {
+  grid-template-columns: 30px 16px minmax(0, 1fr);
+  min-height: 39px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(30, 20, 10, 0.10);
+}
+
+.food-number {
+  font-size: 10px;
+}
+
+.food-dot {
+  font-size: 12px;
+}
+
+.food-name {
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.18;
+}
+
+.meal-image-wrapper {
+  min-height: 390px;
+}
+
+.meal-image {
+  min-height: 390px;
+}
+
+.image-fallback {
+  min-height: 390px;
+}
+
+.image-fallback-content small {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+/* Loading / error */
+.menu-loading {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--border);
+  border-top-color: #f26b38;
+  border-radius: 50%;
+  animation: messmate-spin 0.8s linear infinite;
+}
+
+@keyframes messmate-spin {
+  to { transform: rotate(360deg); }
+}
+
+.menu-error {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto 12px;
+  color: #c65a43;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) and (min-width: 721px) {
+
+  .meal-content {
+    padding: 22px 24px;
+  }
+
+  .food-tables {
+    gap: 12px;
+  }
+
+  .food-item {
+    grid-template-columns: 27px 13px minmax(0, 1fr);
+  }
+
+  .food-name {
+    font-size: 18px;
+  }
+
+  .meal-section {
+    min-height: 360px;
+  }
+
+  .meal-image-wrapper,
+  .meal-image,
+  .image-fallback {
+    min-height: 360px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   IMPORTANT:
+   Food + image STAY BESIDE each other.
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+  /* Compact page spacing */
+  .menu-page {
+    width: calc(100% - 24px);
+    padding: 18px 0 30px;
+  }
+
+  .menu-header {
+    min-height: 58px;
+    padding: 9px 14px;
+  }
+
+  .menu-header-left {
+    gap: 10px;
+  }
+
+  .menu-brand {
+    font-size: 11px;
+  }
+
+  .back-button {
+    font-size: 10px;
+  }
+
+  .header-mess {
+    display: none;
+  }
+
+  .theme-toggle {
+    width: 37px;
+    height: 37px;
+    font-size: 14px;
+  }
+
+
+  /* Heading */
+  .date-heading h1 {
+    font-size: 31px;
+    letter-spacing: -1px;
+    margin-top: 5px;
+  }
+
+  .date-heading .hero-small-text {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+
+  /* Date controls */
+  .date-section {
+    gap: 12px;
+  }
+
+  .date-controls {
+    gap: 5px;
+  }
+
+  .date-nav {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .date-display {
+    min-width: 0;
+    padding: 7px 9px;
+    border-radius: 12px;
+  }
+
+  .date-display strong {
+    font-size: 9px;
+  }
+
+  .date-display small {
+    font-size: 6px;
+  }
+
+  .date-calendar-icon {
+    font-size: 15px;
+  }
+
+
+  /* Buttons */
+  .date-actions {
+    gap: 7px;
+    margin-top: 10px;
+  }
+
+  .today-button {
+    min-height: 38px;
+    font-size: 9px;
+    padding: 8px 12px;
+  }
+
+  .date-picker-wrapper {
+    padding: 6px 9px;
+    font-size: 8px;
+  }
+
+  .date-picker-wrapper input {
+    font-size: 9px;
+  }
+
+
+  /* Status */
+  .status-section {
+    margin-top: 12px;
+  }
+
+  .menu-status {
+    min-height: 48px;
+    padding: 8px 10px;
+    border-radius: 13px;
+  }
+
+  .status-left {
+    gap: 8px;
+  }
+
+  .status-left strong {
+    font-size: 8px;
+  }
+
+  .status-left span {
+    font-size: 7px;
+  }
+
+  .status-meal {
+    font-size: 8px;
+  }
+
+
+  /* Meal tabs */
+  .meal-navigation {
+    margin-top: 10px;
+  }
+
+  .meal-tabs {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .meal-tab {
+    min-height: 47px;
+    padding: 6px 8px;
+    border-radius: 11px;
+    gap: 6px;
+  }
+
+  .meal-tab > span {
+    font-size: 13px;
+  }
+
+  .meal-tab strong {
+    font-size: 8px;
+  }
+
+  .meal-tab small {
+    font-size: 6px;
+  }
+
+
+  /* =====================================================
+     MAIN MEAL CARD
+     Food and images remain SIDE-BY-SIDE
+     ===================================================== */
+
+  .meal-slider-wrapper {
+    padding: 0 4px 31px;
+    margin-top: 10px;
+  }
+
+  .meal-slider {
+    border-radius: 18px;
+  }
+
+  .meal-section {
+    display: grid !important;
+    grid-template-columns: 64% 36% !important;
+    min-height: 285px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  /* Food side */
+  .meal-content {
+    order: initial !important;
+    min-width: 0;
+    padding: 15px 9px 13px !important;
+    justify-content: flex-start;
+  }
+
+  .meal-label {
+    gap: 4px;
+    margin-bottom: 3px;
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .meal-emoji {
+    font-size: 11px;
+  }
+
+  .meal-content h2 {
+    font-size: 20px !important;
+    line-height: 1;
+    margin: 1px 0 3px;
+  }
+
+  .meal-subtitle {
+    font-size: 7px;
+    margin: 0 0 8px;
+  }
+
+
+  /* Two food tables stay inside the food column */
+  .food-tables {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 5px !important;
+    width: 100%;
+  }
+
+  .food-table {
+    min-width: 0;
+  }
+
+  .food-item {
+    grid-template-columns: 13px 4px minmax(0, 1fr) !important;
+    min-height: 26px;
+    padding: 4px 0;
+  }
+
+  .food-number {
+    font-size: 6px;
+  }
+
+  .food-dot {
+    font-size: 7px;
+  }
+
+  .food-name {
+    font-size: 10px !important;
+    line-height: 1.12;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* Image side */
+  .meal-image-wrapper {
+    order: initial !important;
+    min-height: 285px !important;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .meal-images {
+    height: 100%;
+    width: 100%;
+    gap: 2px;
+  }
+
+  .meal-images.multiple-images {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .meal-image {
+    min-height: 285px !important;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-fallback {
+    min-height: 285px !important;
+    height: 100%;
+  }
+
+  .image-fallback-content span {
+    font-size: 28px;
+  }
+
+  .image-fallback-content p {
+    font-size: 10px;
+  }
+
+
+  /* Small arrows, kept away from food text */
+  .meal-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .meal-arrow-left {
+    left: -2px;
+  }
+
+  .meal-arrow-right {
+    right: -2px;
+  }
+
+
+  /* Dots */
+  .meal-dots {
+    bottom: 9px;
+    gap: 5px;
+  }
+
+  .meal-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .meal-dot.active {
+    width: 16px;
+  }
+
+  .swipe-hint {
+    bottom: -1px;
+    font-size: 6px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .menu-page {
+    width: calc(100% - 18px);
+  }
+
+  .date-heading h1 {
+    font-size: 28px;
+  }
+
+  .meal-section {
+    grid-template-columns: 65% 35% !important;
+    min-height: 260px;
+  }
+
+  .meal-content {
+    padding: 13px 7px 11px !important;
+  }
+
+  .meal-content h2 {
+    font-size: 18px !important;
+  }
+
+  .food-tables {
+    gap: 4px !important;
+  }
+
+  .food-item {
+    grid-template-columns: 11px 3px minmax(0, 1fr) !important;
+    min-height: 24px;
+    padding: 3px 0;
+  }
+
+  .food-name {
+    font-size: 9px !important;
+  }
+
+  .food-number {
+    font-size: 5.5px;
+  }
+
+  .food-dot {
+    font-size: 6px;
+  }
+
+  .meal-image-wrapper,
+  .meal-image,
+  .image-fallback {
+    min-height: 260px !important;
+  }
+
+  .meal-label {
+    font-size: 6.5px;
+  }
+
+  .meal-subtitle {
+    font-size: 6.5px;
+  }
+}
+
+
+/* =========================================================
+   FINAL SPACE / IMAGE / TEXT BALANCE
+   ========================================================= */
+
+.meal-section {
+  min-height: 320px !important;
+}
+
+.meal-section.morning,
+.meal-section.evening {
+  grid-template-columns: 65% 35% !important;
+}
+
+.meal-section.afternoon,
+.meal-section.night {
+  grid-template-columns: 35% 65% !important;
+}
+
+.meal-content {
+  padding: 20px 26px !important;
+  justify-content: center;
+}
+
+.meal-content h2 {
+  font-size: clamp(30px, 2.6vw, 38px) !important;
+  margin: 0 0 3px;
+}
+
+.meal-subtitle {
+  font-size: 10px !important;
+  margin: 3px 0 10px !important;
+}
+
+.food-item {
+  min-height: 36px !important;
+  padding: 5px 0 !important;
+}
+
+.food-number {
+  font-size: 10px !important;
+}
+
+.food-dot {
+  font-size: 12px !important;
+}
+
+.food-name {
+  font-size: 22px !important;
+  line-height: 1.12 !important;
+  font-weight: 650;
+}
+
+.meal-image-wrapper,
+.meal-image,
+.image-fallback {
+  min-height: 320px !important;
+  height: 320px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 900px) and (min-width: 721px) {
+
+  .meal-section {
+    min-height: 300px !important;
+  }
+
+  .meal-section.morning,
+  .meal-section.evening {
+    grid-template-columns: 64% 36% !important;
+  }
+
+  .meal-section.afternoon,
+  .meal-section.night {
+    grid-template-columns: 36% 64% !important;
+  }
+
+  .meal-content {
+    padding: 18px 20px !important;
+  }
+
+  .food-name {
+    font-size: 18px !important;
+  }
+
+  .meal-image-wrapper,
+  .meal-image,
+  .image-fallback {
+    min-height: 300px !important;
+    height: 300px !important;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 720px) {
+
+  .meal-section {
+    min-height: 250px !important;
+    height: 250px !important;
+  }
+
+  /* Breakfast / Snacks: food 60% | image 40% */
+  .meal-section.morning,
+  .meal-section.evening {
+    grid-template-columns: 60% 40% !important;
+  }
+
+  /* Lunch / Dinner: image 40% | food 60% */
+  .meal-section.afternoon,
+  .meal-section.night {
+    grid-template-columns: 40% 60% !important;
+  }
+
+  .meal-content {
+    padding: 12px 9px !important;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .meal-label {
+    font-size: 7px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .meal-emoji {
+    font-size: 10px !important;
+  }
+
+  .meal-content h2 {
+    font-size: 20px !important;
+    margin: 0 0 2px !important;
+  }
+
+  .meal-subtitle {
+    font-size: 7px !important;
+    margin: 0 0 7px !important;
+  }
+
+  .food-tables {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 5px !important;
+  }
+
+  .food-item {
+    grid-template-columns: 13px 4px minmax(0, 1fr) !important;
+    min-height: 25px !important;
+    padding: 3px 0 !important;
+  }
+
+  .food-number {
+    font-size: 6px !important;
+  }
+
+  .food-dot {
+    font-size: 7px !important;
+  }
+
+  .food-name {
+    font-size: 12px !important;
+    line-height: 1.1 !important;
+    font-weight: 650;
+  }
+
+  .meal-image-wrapper,
+  .meal-image,
+  .image-fallback {
+    min-height: 250px !important;
+    height: 250px !important;
+  }
+
+  .meal-images {
+    gap: 2px;
+  }
+
+  .meal-arrow {
+    width: 27px !important;
+    height: 27px !important;
+    font-size: 10px !important;
+  }
+
+  .meal-arrow-left {
+    left: -2px !important;
+  }
+
+  .meal-arrow-right {
+    right: -2px !important;
+  }
+}
+
+
+/* SMALL PHONES */
+@media (max-width: 400px) {
+
+  .meal-section {
+    min-height: 230px !important;
+    height: 230px !important;
+  }
+
+  .meal-section.morning,
+  .meal-section.evening {
+    grid-template-columns: 61% 39% !important;
+  }
+
+  .meal-section.afternoon,
+  .meal-section.night {
+    grid-template-columns: 39% 61% !important;
+  }
+
+  .meal-content {
+    padding: 10px 7px !important;
+  }
+
+  .meal-content h2 {
+    font-size: 18px !important;
+  }
+
+  .meal-subtitle {
+    font-size: 6.5px !important;
+  }
+
+  .food-tables {
+    gap: 4px !important;
+  }
+
+  .food-item {
+    grid-template-columns: 11px 3px minmax(0, 1fr) !important;
+    min-height: 23px !important;
+    padding: 2px 0 !important;
+  }
+
+  .food-name {
+    font-size: 10.5px !important;
+  }
+
+  .food-number {
+    font-size: 5.5px !important;
+  }
+
+  .food-dot {
+    font-size: 6px !important;
+  }
+
+  .meal-image-wrapper,
+  .meal-image,
+  .image-fallback {
+    min-height: 230px !important;
+    height: 230px !important;
+  }
+}
+
+
+/* =========================================================
+   MESSMATE — ENHANCED LIGHT MODE
+   Keeps the existing layout and dark mode unchanged.
+   ========================================================= */
+
+:root:not([data-theme="dark"]) {
+  --page-bg: #f4eee6;
+  --surface: #fffdf9;
+  --surface-soft: #f7efe6;
+  --text: #211a16;
+  --muted: #75685f;
+  --soft-text: #9a8d82;
+  --border: rgba(87, 60, 39, 0.14);
+  --header-bg: rgba(250, 244, 237, 0.94);
+  --shadow: rgba(91, 61, 38, 0.13);
+}
+
+/* Warm, slightly textured-looking page background */
+:root:not([data-theme="dark"]) html,
+:root:not([data-theme="dark"]) body,
+:root:not([data-theme="dark"]) .app {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255, 188, 117, 0.13), transparent 27%),
+    radial-gradient(circle at 92% 18%, rgba(188, 169, 255, 0.10), transparent 28%),
+    radial-gradient(circle at 50% 100%, rgba(126, 190, 129, 0.09), transparent 32%),
+    linear-gradient(135deg, #faf4ed 0%, #f2ebe2 48%, #f7f0e8 100%);
+}
+
+/* Header becomes part of the warm theme instead of plain white */
+:root:not([data-theme="dark"]) .menu-header {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 248, 239, 0.96),
+      rgba(250, 241, 231, 0.94)
+    );
+  border-bottom-color: rgba(101, 72, 48, 0.12);
+  box-shadow: 0 5px 25px rgba(87, 60, 39, 0.06);
+}
+
+/* Main controls */
+:root:not([data-theme="dark"]) .date-display,
+:root:not([data-theme="dark"]) .date-nav,
+:root:not([data-theme="dark"]) .date-picker-wrapper,
+:root:not([data-theme="dark"]) .menu-status,
+:root:not([data-theme="dark"]) .meal-tab,
+:root:not([data-theme="dark"]) .meal-arrow,
+:root:not([data-theme="dark"]) .theme-toggle,
+:root:not([data-theme="dark"]) .header-mess {
+  background:
+    linear-gradient(145deg, #fffefd 0%, #f8f0e8 100%);
+  border-color: rgba(104, 73, 46, 0.14);
+  box-shadow:
+    0 7px 22px rgba(92, 61, 37, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Current-menu button gets more visual presence */
+:root:not([data-theme="dark"]) .today-button {
+  background: linear-gradient(135deg, #ff7040, #f15a2f);
+  box-shadow:
+    0 8px 20px rgba(242, 91, 47, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+:root:not([data-theme="dark"]) .today-button.active {
+  background: linear-gradient(135deg, #35ad65, #278c51);
+}
+
+/* Meal tabs — make inactive tabs visible and colorful */
+:root:not([data-theme="dark"]) .meal-tab {
+  background: linear-gradient(145deg, #ffffff 0%, #f5eee7 100%);
+}
+
+:root:not([data-theme="dark"]) .meal-tab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(92, 61, 37, 0.12);
+}
+
+/* Breakfast */
+:root:not([data-theme="dark"]) .meal-tab.active.morning {
+  background:
+    linear-gradient(135deg, #fff0dc 0%, #ffd5aa 100%);
+  border-color: #ed9a52;
+  box-shadow:
+    0 9px 25px rgba(237, 154, 82, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+/* Lunch */
+:root:not([data-theme="dark"]) .meal-tab.active.afternoon {
+  background:
+    linear-gradient(135deg, #edf8e5 0%, #d2eabf 100%);
+  border-color: #78ad55;
+  box-shadow:
+    0 9px 25px rgba(120, 173, 85, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+/* Snacks */
+:root:not([data-theme="dark"]) .meal-tab.active.evening {
+  background:
+    linear-gradient(135deg, #fff0f5 0%, #ead8ed 100%);
+  border-color: #cc7b9a;
+  box-shadow:
+    0 9px 25px rgba(204, 123, 154, 0.17),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+/* Dinner */
+:root:not([data-theme="dark"]) .meal-tab.active.night {
+  background:
+    linear-gradient(135deg, #eef0ff 0%, #d8d9f5 100%);
+  border-color: #7976d3;
+  box-shadow:
+    0 9px 25px rgba(121, 118, 211, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+/* Meal cards — richer backgrounds */
+:root:not([data-theme="dark"]) .meal-section.morning {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,0.42), transparent 22%),
+    linear-gradient(135deg, #fff0dc 0%, #ffd8b1 52%, #ffc99b 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.55);
+}
+
+:root:not([data-theme="dark"]) .meal-section.afternoon {
+  background:
+    radial-gradient(circle at 18% 15%, rgba(255,255,255,0.42), transparent 22%),
+    linear-gradient(135deg, #edf8e5 0%, #d7edc4 52%, #c5e2ae 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.55);
+}
+
+:root:not([data-theme="dark"]) .meal-section.evening {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,0.42), transparent 22%),
+    linear-gradient(135deg, #fff0f4 0%, #ead8ed 52%, #dfcce7 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.55);
+}
+
+:root:not([data-theme="dark"]) .meal-section.night {
+  background:
+    radial-gradient(circle at 18% 15%, rgba(255,255,255,0.44), transparent 22%),
+    linear-gradient(135deg, #eef0ff 0%, #dcdcf6 52%, #ced0ef 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.55);
+}
+
+/* Food area readability */
+:root:not([data-theme="dark"]) .meal-content h2,
+:root:not([data-theme="dark"]) .food-name {
+  color: #201915;
+}
+
+:root:not([data-theme="dark"]) .meal-label {
+  color: #66594f;
+}
+
+:root:not([data-theme="dark"]) .meal-subtitle {
+  color: #776b62;
+}
+
+:root:not([data-theme="dark"]) .food-item {
+  border-color: rgba(74, 53, 37, 0.15);
+}
+
+:root:not([data-theme="dark"]) .food-number,
+:root:not([data-theme="dark"]) .food-dot {
+  color: #8b796b;
+}
+
+/* Image area gets a colored frame rather than plain white around photos */
+:root:not([data-theme="dark"]) .meal-section.morning .meal-image-wrapper {
+  background: #ffd9b8;
+}
+
+:root:not([data-theme="dark"]) .meal-section.afternoon .meal-image-wrapper {
+  background: #d8ebc7;
+}
+
+:root:not([data-theme="dark"]) .meal-section.evening .meal-image-wrapper {
+  background: #ead8e8;
+}
+
+:root:not([data-theme="dark"]) .meal-section.night .meal-image-wrapper {
+  background: #d8daf3;
+}
+
+/* Slider shadow makes the card stand out from the page */
+:root:not([data-theme="dark"]) .meal-slider {
+  box-shadow:
+    0 18px 42px rgba(82, 57, 38, 0.14),
+    0 3px 10px rgba(82, 57, 38, 0.06);
+}
+
+/* Navigation arrows */
+:root:not([data-theme="dark"]) .meal-arrow,
+:root:not([data-theme="dark"]) .date-nav {
+  color: #40352e;
+}
+
+:root:not([data-theme="dark"]) .meal-arrow:hover,
+:root:not([data-theme="dark"]) .date-nav:hover {
+  background: #fffaf4;
+  box-shadow: 0 10px 26px rgba(82, 57, 38, 0.16);
+}
+
+/* Status card */
+:root:not([data-theme="dark"]) .menu-status {
+  background:
+    linear-gradient(135deg, #fffefd 0%, #f7eee6 100%);
+}
+
+/* Date controls */
+:root:not([data-theme="dark"]) .date-display strong,
+:root:not([data-theme="dark"]) .date-picker-wrapper input {
+  color: #211a16;
+}
+
+:root:not([data-theme="dark"]) .date-display small,
+:root:not([data-theme="dark"]) .date-picker-wrapper {
+  color: #85766b;
+}
+
+/* Swipe dots */
+:root:not([data-theme="dark"]) .meal-dot {
+  background: #b9aaa0;
+}
+
+:root:not([data-theme="dark"]) .meal-dot.active {
+  background: #f26b38;
+  box-shadow: 0 2px 8px rgba(242, 107, 56, 0.25);
+}
+
+/* Back button gets slightly stronger contrast */
+:root:not([data-theme="dark"]) .back-button {
+  color: #62564d;
+}
+
+:root:not([data-theme="dark"]) .back-button:hover {
+  color: #211a16;
+}
+
+/* Loading / empty states */
+:root:not([data-theme="dark"]) .empty-menu,
+:root:not([data-theme="dark"]) .menu-loading {
+  background:
+    linear-gradient(145deg, #fffefd, #f6eee6);
+  border-color: rgba(104, 73, 46, 0.13);
+}
+
+:root:not([data-theme="dark"]) .empty-menu {
+  box-shadow: 0 14px 36px rgba(82, 57, 38, 0.10);
+}
+
+/* Give the page a subtle warm glow around the main content */
+@media (min-width: 721px) {
+  :root:not([data-theme="dark"]) .menu-page {
+    position: relative;
+  }
+
+  :root:not([data-theme="dark"]) .menu-page::before {
+    content: "";
+    position: fixed;
+    width: 420px;
+    height: 420px;
+    top: 18%;
+    right: -180px;
+    border-radius: 50%;
+    background: rgba(255, 191, 123, 0.08);
+    filter: blur(70px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  :root:not([data-theme="dark"]) .menu-page > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Keep the richer theme subtle on phones */
+@media (max-width: 720px) {
+  :root:not([data-theme="dark"]) .meal-section.morning {
+    background:
+      linear-gradient(135deg, #fff0dc 0%, #ffd5ae 100%);
+  }
+
+  :root:not([data-theme="dark"]) .meal-section.afternoon {
+    background:
+      linear-gradient(135deg, #edf8e5 0%, #d4eabe 100%);
+  }
+
+  :root:not([data-theme="dark"]) .meal-section.evening {
+    background:
+      linear-gradient(135deg, #fff0f4 0%, #e8d8ed 100%);
+  }
+
+  :root:not([data-theme="dark"]) .meal-section.night {
+    background:
+      linear-gradient(135deg, #eef0ff 0%, #d8d9f5 100%);
+  }
+}
+
+
+/* =========================================================
+   MESSMATE — FINAL LIGHT MODE PALETTE
+   Morning   = Light Green + Yellow
+   Afternoon = Red + Crimson
+   Snacks    = Pink + Purple
+   Night     = Grey + Blue
+   ========================================================= */
+
+:root:not([data-theme="dark"]) {
+  --page-bg: #f7f5f2;
+  --surface: #ffffff;
+  --surface-soft: #f3f2f0;
+  --text: #171719;
+  --muted: #68656a;
+  --soft-text: #969197;
+  --border: rgba(35, 35, 40, 0.12);
+  --header-bg: rgba(250, 250, 249, 0.96);
+  --shadow: rgba(30, 30, 35, 0.12);
+}
+
+/* ---------- LIGHT PAGE BACKGROUND ---------- */
+
+:root:not([data-theme="dark"]) body,
+:root:not([data-theme="dark"]) .app {
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(255, 220, 82, 0.10),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 20%,
+      rgba(218, 73, 99, 0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(108, 99, 190, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #faf9f7 0%, #f1f0ef 100%);
+}
+
+/* ---------- HEADER ---------- */
+
+:root:not([data-theme="dark"]) .menu-header {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.98),
+      rgba(247,247,246,0.96)
+    );
+  border-bottom-color: rgba(35, 35, 40, 0.10);
+  box-shadow: 0 5px 22px rgba(30,30,35,0.06);
+}
+
+/* =========================================================
+   MORNING
+   LIGHT GREEN + YELLOW
+   ========================================================= */
+
+:root:not([data-theme="dark"]) .meal-section.morning {
+  background:
+    radial-gradient(
+      circle at 82% 15%,
+      rgba(255, 235, 87, 0.34),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #e7f6c8 0%,
+      #d8efad 48%,
+      #f5e99a 100%
+    );
+  box-shadow:
+    0 16px 38px rgba(135, 154, 55, 0.16),
+    inset 0 1px 0 rgba(255,255,255,0.70);
+}
+
+:root:not([data-theme="dark"]) .meal-section.morning .meal-image-wrapper {
+  background: linear-gradient(135deg, #dcedb8, #f4e79a);
+}
+
+:root:not([data-theme="dark"]) .meal-tab.active.morning {
+  background:
+    linear-gradient(135deg, #e5f5c4, #f5e79a);
+  border-color: #b8bd55;
+  box-shadow:
+    0 9px 25px rgba(171, 170, 68, 0.22),
+    inset 0 1px 0 rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   AFTERNOON
+   RED + CRIMSON
+   ========================================================= */
+
+:root:not([data-theme="dark"]) .meal-section.afternoon {
+  background:
+    radial-gradient(
+      circle at 18% 15%,
+      rgba(255, 126, 126, 0.25),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #ffe0dc 0%,
+      #f7c3c4 45%,
+      #eaa0aa 100%
+    );
+  box-shadow:
+    0 16px 38px rgba(169, 48, 65, 0.16),
+    inset 0 1px 0 rgba(255,255,255,0.70);
+}
+
+:root:not([data-theme="dark"]) .meal-section.afternoon .meal-image-wrapper {
+  background: linear-gradient(135deg, #f3c0c0, #d98d9b);
+}
+
+:root:not([data-theme="dark"]) .meal-tab.active.afternoon {
+  background:
+    linear-gradient(135deg, #ffe1dc, #efb3b8);
+  border-color: #c94b5b;
+  box-shadow:
+    0 9px 25px rgba(190, 54, 70, 0.20),
+    inset 0 1px 0 rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   SNACKS
+   PINK + PURPLE
+   ========================================================= */
+
+:root:not([data-theme="dark"]) .meal-section.evening {
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(255, 166, 211, 0.28),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #ffe1ef 0%,
+      #f5cce3 45%,
+      #d9c8ee 100%
+    );
+  box-shadow:
+    0 16px 38px rgba(153, 84, 158, 0.16),
+    inset 0 1px 0 rgba(255,255,255,0.72);
+}
+
+:root:not([data-theme="dark"]) .meal-section.evening .meal-image-wrapper {
+  background: linear-gradient(135deg, #f4c9df, #d8c5eb);
+}
+
+:root:not([data-theme="dark"]) .meal-tab.active.evening {
+  background:
+    linear-gradient(135deg, #ffe2ef, #decdf0);
+  border-color: #a15ca8;
+  box-shadow:
+    0 9px 25px rgba(151, 77, 157, 0.20),
+    inset 0 1px 0 rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   NIGHT
+   GREY + BLUE
+   ========================================================= */
+
+:root:not([data-theme="dark"]) .meal-section.night {
+  background:
+    radial-gradient(
+      circle at 18% 15%,
+      rgba(145, 174, 220, 0.25),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #e8e9ec 0%,
+      #d7dce5 48%,
+      #bdcbe0 100%
+    );
+  box-shadow:
+    0 16px 38px rgba(70, 92, 122, 0.17),
+    inset 0 1px 0 rgba(255,255,255,0.75);
+}
+
+:root:not([data-theme="dark"]) .meal-section.night .meal-image-wrapper {
+  background: linear-gradient(135deg, #d9dde4, #bdcce1);
+}
+
+:root:not([data-theme="dark"]) .meal-tab.active.night {
+  background:
+    linear-gradient(135deg, #e9eaed, #cbd7e8);
+  border-color: #7189ad;
+  box-shadow:
+    0 9px 25px rgba(76, 101, 139, 0.20),
+    inset 0 1px 0 rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   COMMON LIGHT-MODE CARDS
+   ========================================================= */
+
+:root:not([data-theme="dark"]) .meal-tab {
+  background:
+    linear-gradient(145deg, #ffffff 0%, #f3f3f2 100%);
+  border-color: rgba(35,35,40,0.11);
+  box-shadow:
+    0 7px 20px rgba(30,30,35,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.90);
+}
+
+:root:not([data-theme="dark"]) .meal-tab:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 26px rgba(30,30,35,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.90);
+}
+
+:root:not([data-theme="dark"]) .date-display,
+:root:not([data-theme="dark"]) .date-nav,
+:root:not([data-theme="dark"]) .date-picker-wrapper,
+:root:not([data-theme="dark"]) .menu-status,
+:root:not([data-theme="dark"]) .meal-arrow,
+:root:not([data-theme="dark"]) .theme-toggle {
+  background:
+    linear-gradient(145deg, #ffffff, #f3f3f2);
+  border-color: rgba(35,35,40,0.11);
+  box-shadow:
+    0 7px 21px rgba(30,30,35,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.92);
+}
+
+:root:not([data-theme="dark"]) .today-button {
+  background: linear-gradient(135deg, #ff7443, #ef522d);
+  box-shadow:
+    0 9px 23px rgba(239,82,45,0.24),
+    inset 0 1px 0 rgba(255,255,255,0.28);
+}
+
+:root:not([data-theme="dark"]) .today-button.active {
+  background: linear-gradient(135deg, #36b46b, #278e51);
+}
+
+/* ---------- LIGHT MODE TYPOGRAPHY ---------- */
+
+:root:not([data-theme="dark"]) .meal-content h2,
+:root:not([data-theme="dark"]) .food-name {
+  color: #19181b;
+}
+
+:root:not([data-theme="dark"]) .meal-label {
+  color: #5e5a5f;
+}
+
+:root:not([data-theme="dark"]) .meal-subtitle {
+  color: #6f6a70;
+}
+
+:root:not([data-theme="dark"]) .food-item {
+  border-color: rgba(45,43,47,0.15);
+}
+
+:root:not([data-theme="dark"]) .food-number,
+:root:not([data-theme="dark"]) .food-dot {
+  color: #7f7a82;
+}
+
+:root:not([data-theme="dark"]) .back-button {
+  color: #5e5a60;
+}
+
+:root:not([data-theme="dark"]) .back-button:hover {
+  color: #171719;
+}
+
+/* ---------- DATE ICONS / CONTROLS ---------- */
+
+/* Larger calendar/date icons */
+:root:not([data-theme="dark"]) .date-calendar-icon {
+  font-size: 24px !important;
+}
+
+:root:not([data-theme="dark"]) .date-display .date-calendar-icon,
+:root:not([data-theme="dark"]) .date-display svg {
+  width: 25px !important;
+  height: 25px !important;
+  min-width: 25px !important;
+}
+
+:root:not([data-theme="dark"]) .date-nav {
+  width: 48px;
+  height: 48px;
+  font-size: 19px;
+}
+
+:root:not([data-theme="dark"]) .date-picker-wrapper {
+  min-height: 42px;
+}
+
+:root:not([data-theme="dark"]) .date-picker-wrapper input {
+  font-size: 13px;
+}
+
+/* Larger calendar icon inside the date picker */
+:root:not([data-theme="dark"]) .date-picker-wrapper svg,
+:root:not([data-theme="dark"]) .date-picker-wrapper .calendar-icon {
+  width: 19px !important;
+  height: 19px !important;
+}
+
+/* ---------- STATUS CARD ---------- */
+
+:root:not([data-theme="dark"]) .menu-status {
+  background:
+    linear-gradient(135deg, #ffffff, #f1f1f0);
+}
+
+/* ---------- SLIDER ---------- */
+
+:root:not([data-theme="dark"]) .meal-slider {
+  box-shadow:
+    0 18px 42px rgba(30,30,35,0.13),
+    0 3px 10px rgba(30,30,35,0.06);
+}
+
+:root:not([data-theme="dark"]) .meal-arrow:hover,
+:root:not([data-theme="dark"]) .date-nav:hover {
+  background: #ffffff;
+  box-shadow:
+    0 10px 26px rgba(30,30,35,0.15);
+}
+
+/* ---------- DOTS ---------- */
+
+:root:not([data-theme="dark"]) .meal-dot {
+  background: #b6b3b7;
+}
+
+:root:not([data-theme="dark"]) .meal-dot.active {
+  background: #ef6438;
+  box-shadow: 0 2px 9px rgba(239,100,56,0.28);
+}
+
+/* =========================================================
+   RESPONSIVE DATE ICONS
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+  .date-display .date-calendar-icon,
+  .date-display svg {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+  }
+
+  .date-calendar-icon {
+    font-size: 20px !important;
+  }
+
+  .date-nav {
+    width: 39px !important;
+    height: 39px !important;
+    font-size: 15px !important;
+  }
+
+  .date-picker-wrapper svg,
+  .date-picker-wrapper .calendar-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .date-picker-wrapper {
+    min-height: 38px;
+  }
+
+  /* Keep the colored meal identity on mobile */
+  .meal-section.morning {
+    background:
+      linear-gradient(135deg, #e7f6c8, #f5e99a) !important;
+  }
+
+  .meal-section.afternoon {
+    background:
+      linear-gradient(135deg, #ffe0dc, #eaa0aa) !important;
+  }
+
+  .meal-section.evening {
+    background:
+      linear-gradient(135deg, #ffe1ef, #d9c8ee) !important;
+  }
+
+  .meal-section.night {
+    background:
+      linear-gradient(135deg, #e8e9ec, #bdcbe0) !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .date-display .date-calendar-icon,
+  .date-display svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+  }
+
+  .date-nav {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* =========================================================
+   HOSTEL TYPE SWITCHER - MEN'S + WOMEN'S
+   ========================================================= */
+
+.change-hostel-button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 6px 18px var(--shadow);
+  font-size: 10px;
+  font-weight: 800;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.change-hostel-button:hover {
+  transform: translateY(-2px);
+}
+
+.header-hostel {
+  margin-left: 5px;
+  padding: 4px 8px;
+  border-radius: 100px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Women's hostel uses the same complete menu system as Men's.
+   The hostel class is kept on the root so Women's-specific styling
+   can be added later without changing the shared meal components. */
+.hostel-womens .womens-card {
+  opacity: 1;
+}
+
+.hostel-mens .mens-card,
+.hostel-womens .womens-card {
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .change-hostel-button {
+    padding: 0 11px;
+    font-size: 9px;
+  }
+
+  .header-hostel {
+    display: none;
+  }
+}
+
+/* Make the Women's card fully active on the hostel selection screen. */
+.hostel-selection .womens-card {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SHARED MEAL IMAGES + TWO FOOD TABLES
+   ========================================================= */
+
+.meal-images {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.meal-images.single-image .meal-image {
+  width: 100%;
+  height: 100%;
+}
+
+.meal-images.multiple-images .meal-image {
+  width: calc(50% - 5px);
+  height: 100%;
+}
+
+.meal-image {
+  display: block;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.food-tables {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.food-table {
+  min-width: 0;
+}
+
+@media (max-width: 720px) {
+  .food-tables {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .food-item {
+    grid-template-columns: 24px 10px minmax(0, 1fr);
+  }
+
+  .food-number {
+    font-size: 8px;
+  }
+
+  .food-dot {
+    font-size: 10px;
+  }
+
+  .food-name {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+}
+
+
+/* =========================================================
+   MESSMATE — MOBILE BACKGROUND IMAGE ONLY
+   ---------------------------------------------------------
+   IMPORTANT:
+   • Desktop/laptop design above is NOT changed.
+   • Existing colors, typography and controls are preserved.
+   • Only the mobile meal card is changed.
+   • Images become the BACKGROUND of the whole meal card.
+   • Food remains over the image, never beside it.
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Keep the existing mobile page structure */
+  .meal-slider-wrapper {
+    padding: 12px 22px 35px !important;
+  }
+
+  .meal-slider {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 24px !important;
+  }
+
+  /* -------------------------------------------------------
+     FULL CARD BACKGROUND
+     ------------------------------------------------------- */
+
+  .meal-section,
+  .meal-section.morning,
+  .meal-section.afternoon,
+  .meal-section.evening,
+  .meal-section.night {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    min-height: 420px !important;
+    height: auto !important;
+    overflow: hidden !important;
+
+    /* Remove the old side-by-side layout */
+    grid-template-columns: none !important;
+  }
+
+  /* Image layer fills the complete card */
+  .meal-image-wrapper {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .meal-images {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    display: grid !important;
+    gap: 0 !important;
+  }
+
+  .meal-images.single-image {
+    grid-template-columns: 1fr !important;
+  }
+
+  .meal-images.multiple-images {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2px !important;
+  }
+
+  .meal-image,
+  .image-fallback {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  /* -------------------------------------------------------
+     COLOR-TINTED OVERLAY
+
+     Uses the SAME meal colors already used by the laptop UI.
+     It keeps the photograph visible while making text readable.
+     ------------------------------------------------------- */
+
+  .meal-section::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .meal-section.morning::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 241, 223, 0.78) 0%,
+        rgba(255, 217, 179, 0.72) 48%,
+        rgba(255, 217, 179, 0.82) 100%
+      ) !important;
+  }
+
+  .meal-section.afternoon::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(237, 248, 228, 0.78) 0%,
+        rgba(215, 239, 185, 0.70) 48%,
+        rgba(215, 239, 185, 0.82) 100%
+      ) !important;
+  }
+
+  .meal-section.evening::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 230, 236, 0.80) 0%,
+        rgba(231, 216, 243, 0.70) 48%,
+        rgba(231, 216, 243, 0.82) 100%
+      ) !important;
+  }
+
+  .meal-section.night::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(227, 233, 255, 0.80) 0%,
+        rgba(216, 215, 247, 0.70) 48%,
+        rgba(216, 215, 247, 0.82) 100%
+      ) !important;
+  }
+
+  /* -------------------------------------------------------
+     FOOD CONTENT OVER BACKGROUND
+     ------------------------------------------------------- */
+
+  .meal-content {
+    position: relative !important;
+    z-index: 3 !important;
+    width: 100% !important;
+    min-height: 420px !important;
+    height: auto !important;
+    padding: 22px 16px 38px !important;
+
+    /* Critical: no separate food panel */
+    background: transparent !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  .meal-label {
+    margin-bottom: 5px !important;
+    color: #71675f !important;
+    font-size: 7px !important;
+    letter-spacing: 1px !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.35) !important;
+  }
+
+  .meal-emoji {
+    font-size: 13px !important;
+  }
+
+  .meal-content h2 {
+    margin: 1px 0 3px !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+    color: #201a16 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.45) !important;
+  }
+
+  .meal-subtitle {
+    margin: 5px 0 13px !important;
+    color: #71675f !important;
+    font-size: 8px !important;
+  }
+
+  /* -------------------------------------------------------
+     KEEP THE LAPTOP'S TWO-COLUMN FOOD STRUCTURE
+     Just scale it for mobile.
+     ------------------------------------------------------- */
+
+  .food-tables {
+    position: relative !important;
+    z-index: 4 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 9px !important;
+    width: 100% !important;
+  }
+
+  .food-table {
+    min-width: 0 !important;
+    border-top: 1px solid rgba(30, 20, 10, 0.10) !important;
+  }
+
+  .food-item {
+    display: grid !important;
+    grid-template-columns: 18px 5px minmax(0, 1fr) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 6px 0 !important;
+    align-items: start !important;
+    border-bottom: 1px solid rgba(30, 20, 10, 0.10) !important;
+  }
+
+  .food-number {
+    padding-top: 1px !important;
+    color: #8f8277 !important;
+    font-size: 6.5px !important;
+    font-weight: 800 !important;
+  }
+
+  .food-dot {
+    padding-top: 1px !important;
+    color: #8f8277 !important;
+    font-size: 7px !important;
+  }
+
+  .food-name {
+    min-width: 0 !important;
+    color: #211c18 !important;
+    font-size: 10.5px !important;
+    font-weight: 650 !important;
+    line-height: 1.22 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+
+  /* -------------------------------------------------------
+     ARROWS — SAME STYLE, JUST ABOVE BACKGROUND
+     ------------------------------------------------------- */
+
+  .meal-arrow {
+    z-index: 10 !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 11px !important;
+    box-shadow: 0 6px 18px var(--shadow) !important;
+  }
+
+  .meal-arrow-left {
+    left: 5px !important;
+  }
+
+  .meal-arrow-right {
+    right: 5px !important;
+  }
+
+  .meal-dots {
+    z-index: 11 !important;
+    bottom: 10px !important;
+  }
+
+  .swipe-hint {
+    z-index: 11 !important;
+    bottom: -1px !important;
+    font-size: 6px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .meal-slider-wrapper {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .meal-section,
+  .meal-section.morning,
+  .meal-section.afternoon,
+  .meal-section.evening,
+  .meal-section.night {
+    min-height: 400px !important;
+  }
+
+  .meal-content {
+    min-height: 400px !important;
+    padding: 19px 13px 35px !important;
+  }
+
+  .meal-content h2 {
+    font-size: 25px !important;
+  }
+
+  .food-tables {
+    gap: 7px !important;
+  }
+
+  .food-item {
+    grid-template-columns: 16px 4px minmax(0, 1fr) !important;
+    padding: 5px 0 !important;
+  }
+
+  .food-name {
+    font-size: 9.5px !important;
+    line-height: 1.2 !important;
+  }
+
+  .food-number {
+    font-size: 6px !important;
+  }
+
+  .food-dot {
+    font-size: 6.5px !important;
+  }
+}
+
+
+/* =========================================================
+   DARK MODE
+   Keep the same meal color identity, but darken the tint.
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  :root[data-theme="dark"] .meal-section.morning::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(104, 62, 27, 0.76),
+        rgba(72, 42, 22, 0.84)
+      ) !important;
+  }
+
+  :root[data-theme="dark"] .meal-section.afternoon::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(35, 76, 40, 0.76),
+        rgba(25, 57, 30, 0.86)
+      ) !important;
+  }
+
+  :root[data-theme="dark"] .meal-section.evening::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(91, 48, 70, 0.76),
+        rgba(55, 38, 70, 0.86)
+      ) !important;
+  }
+
+  :root[data-theme="dark"] .meal-section.night::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(45, 53, 100, 0.76),
+        rgba(31, 36, 75, 0.86)
+      ) !important;
+  }
+
+  :root[data-theme="dark"] .meal-content h2,
+  :root[data-theme="dark"] .food-name {
+    color: #fffaf4 !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  :root[data-theme="dark"] .meal-label,
+  :root[data-theme="dark"] .meal-subtitle,
+  :root[data-theme="dark"] .food-number,
+  :root[data-theme="dark"] .food-dot {
+    color: #d1c8c0 !important;
+  }
+
+  :root[data-theme="dark"] .food-item,
+  :root[data-theme="dark"] .food-table {
+    border-color: rgba(255, 255, 255, 0.14) !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE REFINEMENT
+   - More image blur
+   - Larger food typography
+   - Black typography in light mode
+   - Keeps desktop/laptop design untouched
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Stronger blur on the background photograph.
+     Scale prevents blurred edges from becoming visible. */
+  .meal-image-wrapper {
+    transform: scale(1.035) !important;
+  }
+
+  .meal-image {
+    filter: blur(5px) !important;
+    transform: scale(1.055) !important;
+  }
+
+  .image-fallback {
+    filter: blur(5px) !important;
+    transform: scale(1.055) !important;
+  }
+
+  /* Keep the existing meal-color overlay, but slightly lighter
+     so the photograph is still visible through the blur. */
+  .meal-section::before {
+    opacity: 0.78 !important;
+  }
+
+  /* Larger, clearer food typography */
+  .meal-content h2 {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+  }
+
+  .meal-label {
+    font-size: 7.5px !important;
+    font-weight: 800 !important;
+  }
+
+  .meal-subtitle {
+    font-size: 8.5px !important;
+    font-weight: 500 !important;
+  }
+
+  .food-name {
+    font-size: 12px !important;
+    line-height: 1.24 !important;
+    font-weight: 700 !important;
+  }
+
+  .food-number {
+    font-size: 7px !important;
+    font-weight: 700 !important;
+  }
+
+  .food-dot {
+    font-size: 8px !important;
+  }
+
+  /* Black text in light mode */
+  .meal-content h2,
+  .food-name {
+    color: #111111 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.35) !important;
+  }
+
+  .meal-label,
+  .meal-subtitle,
+  .food-number,
+  .food-dot {
+    color: #222222 !important;
+  }
+
+  /* Slightly stronger separators for the larger text */
+  .food-item,
+  .food-table {
+    border-color: rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+
+/* Very small phones */
+@media (max-width: 400px) {
+
+  .meal-content h2 {
+    font-size: 27px !important;
+  }
+
+  .food-name {
+    font-size: 11px !important;
+  }
+
+  .meal-subtitle {
+    font-size: 8px !important;
+  }
+
+  .meal-image {
+    filter: blur(4.5px) !important;
+  }
+
+  .image-fallback {
+    filter: blur(4.5px) !important;
+  }
+}
+
+
+/* Dark mode: retain readable light text */
+@media (max-width: 700px) {
+
+  :root[data-theme="dark"] .meal-content h2,
+  :root[data-theme="dark"] .food-name {
+    color: #fffaf4 !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.55) !important;
+  }
+
+  :root[data-theme="dark"] .meal-label,
+  :root[data-theme="dark"] .meal-subtitle,
+  :root[data-theme="dark"] .food-number,
+  :root[data-theme="dark"] .food-dot {
+    color: #e0d8d0 !important;
+  }
+
+  :root[data-theme="dark"] .food-item,
+  :root[data-theme="dark"] .food-table {
+    border-color: rgba(255, 255, 255, 0.14) !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE COMPACT CONTROLS + LARGE BLACK FOOD TEXT
+   ---------------------------------------------------------
+   Goal:
+   • Reduce vertical space used by controls
+   • Bring the meal card higher on the phone
+   • Make food names larger, black and bold
+   • Keep the blurred background-image design
+   • Desktop/laptop remains untouched
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* ---------- COMPACT HEADER ---------- */
+
+  .menu-header {
+    min-height: 45px !important;
+    padding: 4px 8px !important;
+  }
+
+  .menu-header-left {
+    gap: 5px !important;
+  }
+
+  .menu-header-left .back-button {
+    font-size: 7px !important;
+    padding: 2px 0 !important;
+  }
+
+  .menu-brand {
+    font-size: 8px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .header-actions {
+    gap: 3px !important;
+  }
+
+  .mess-type-button {
+    min-height: 28px !important;
+    max-width: 78px !important;
+    padding: 3px 6px !important;
+    font-size: 6.5px !important;
+    gap: 2px !important;
+  }
+
+  .mess-type-icon {
+    font-size: 9px !important;
+  }
+
+  .mess-type-label {
+    max-width: 42px !important;
+  }
+
+  .mess-type-chevron {
+    font-size: 7px !important;
+  }
+
+  .theme-toggle {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 10px !important;
+  }
+
+
+  /* ---------- COMPACT TITLE ---------- */
+
+  .date-section {
+    gap: 5px !important;
+    margin-top: 7px !important;
+  }
+
+  .date-heading .hero-small-text {
+    font-size: 5.5px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 1px !important;
+  }
+
+  .date-heading h1 {
+    font-size: 24px !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.7px !important;
+  }
+
+
+  /* ---------- COMPACT DATE NAVIGATION ---------- */
+
+  .date-controls {
+    gap: 4px !important;
+  }
+
+  .date-nav {
+    flex: 0 0 29px !important;
+    width: 29px !important;
+    height: 29px !important;
+    font-size: 10px !important;
+  }
+
+  .date-display {
+    min-height: 29px !important;
+    padding: 4px 7px !important;
+    border-radius: 9px !important;
+  }
+
+  .date-calendar-icon {
+    font-size: 10px !important;
+  }
+
+  .date-display small {
+    font-size: 4.5px !important;
+  }
+
+  .date-display strong {
+    font-size: 7px !important;
+  }
+
+
+  /* ---------- COMPACT CURRENT / CHOOSE DATE ---------- */
+
+  .date-actions {
+    gap: 4px !important;
+    margin-top: 5px !important;
+  }
+
+  .today-button {
+    min-height: 29px !important;
+    padding: 5px 8px !important;
+    border-radius: 9px !important;
+    font-size: 6.5px !important;
+  }
+
+  .date-picker-wrapper {
+    min-height: 29px !important;
+    padding: 4px 7px !important;
+    border-radius: 9px !important;
+    font-size: 6px !important;
+  }
+
+  .date-picker-wrapper input {
+    font-size: 7px !important;
+  }
+
+
+  /* ---------- COMPACT SERVING STATUS ---------- */
+
+  .status-section {
+    margin-top: 5px !important;
+  }
+
+  .menu-status {
+    min-height: 37px !important;
+    padding: 5px 8px !important;
+    border-radius: 10px !important;
+  }
+
+  .status-left {
+    gap: 5px !important;
+  }
+
+  .status-dot {
+    width: 5px !important;
+    height: 5px !important;
+  }
+
+  .status-left strong {
+    font-size: 6px !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  .status-left span {
+    font-size: 5px !important;
+  }
+
+  .status-meal {
+    font-size: 6px !important;
+  }
+
+
+  /* ---------- COMPACT MEAL TABS ---------- */
+
+  .meal-navigation {
+    margin-top: 5px !important;
+  }
+
+  .meal-tabs {
+    gap: 4px !important;
+  }
+
+  .meal-tab {
+    min-height: 38px !important;
+    padding: 4px 6px !important;
+    border-radius: 9px !important;
+    gap: 4px !important;
+  }
+
+  .meal-tab > span {
+    font-size: 10px !important;
+  }
+
+  .meal-tab strong {
+    font-size: 6.5px !important;
+  }
+
+  .meal-tab small {
+    font-size: 5px !important;
+  }
+
+
+  /* =======================================================
+     MEAL CARD — MOVE IT UP
+     ======================================================= */
+
+  .meal-slider-wrapper {
+    padding: 7px 16px 27px !important;
+    margin-top: 2px !important;
+  }
+
+  .meal-section,
+  .meal-section.morning,
+  .meal-section.afternoon,
+  .meal-section.evening,
+  .meal-section.night {
+    min-height: 410px !important;
+  }
+
+  .meal-content {
+    min-height: 410px !important;
+    padding: 18px 14px 35px !important;
+  }
+
+
+  /* =======================================================
+     FOOD TYPOGRAPHY
+     ======================================================= */
+
+  .meal-label {
+    font-size: 8px !important;
+    font-weight: 900 !important;
+  }
+
+  .meal-content h2 {
+    font-size: 29px !important;
+    font-weight: 800 !important;
+    color: #000000 !important;
+  }
+
+  .meal-subtitle {
+    font-size: 8.5px !important;
+    font-weight: 600 !important;
+    color: #111111 !important;
+  }
+
+  .food-item {
+    padding: 7px 0 !important;
+  }
+
+  .food-number {
+    font-size: 7px !important;
+    font-weight: 800 !important;
+    color: #111111 !important;
+  }
+
+  .food-dot {
+    font-size: 8px !important;
+    color: #111111 !important;
+  }
+
+  .food-name {
+    font-size: 13px !important;
+    line-height: 1.22 !important;
+    font-weight: 800 !important;
+    color: #000000 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.35) !important;
+  }
+
+  .food-item,
+  .food-table {
+    border-color: rgba(0, 0, 0, 0.17) !important;
+  }
+
+
+  /* Keep image blur, but do not blur the text/content */
+  .meal-image {
+    filter: blur(5px) !important;
+    transform: scale(1.06) !important;
+  }
+
+  .image-fallback {
+    filter: blur(5px) !important;
+    transform: scale(1.06) !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .menu-header {
+    min-height: 43px !important;
+  }
+
+  .date-heading h1 {
+    font-size: 22px !important;
+  }
+
+  .mess-type-button {
+    max-width: 74px !important;
+  }
+
+  .mess-type-label {
+    max-width: 38px !important;
+  }
+
+  .meal-tab {
+    min-height: 36px !important;
+  }
+
+  .meal-slider-wrapper {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .meal-section,
+  .meal-section.morning,
+  .meal-section.afternoon,
+  .meal-section.evening,
+  .meal-section.night,
+  .meal-content {
+    min-height: 390px !important;
+  }
+
+  .meal-content {
+    padding: 16px 12px 32px !important;
+  }
+
+  .meal-content h2 {
+    font-size: 27px !important;
+  }
+
+  .food-name {
+    font-size: 12px !important;
+  }
+}
+
+
+/* Dark mode keeps readable light text */
+@media (max-width: 700px) {
+  :root[data-theme="dark"] .meal-content h2,
+  :root[data-theme="dark"] .food-name {
+    color: #fffaf4 !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.55) !important;
+  }
+
+  :root[data-theme="dark"] .meal-subtitle,
+  :root[data-theme="dark"] .food-number,
+  :root[data-theme="dark"] .food-dot {
+    color: #e0d8d0 !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE FOOD TEXT — 16px DARK / BOLD
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .food-name {
+    font-size: 16px !important;
+    line-height: 1.22 !important;
+    font-weight: 800 !important;
+    color: #111111 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.45) !important;
+  }
+
+  .food-number {
+    font-size: 8px !important;
+    font-weight: 800 !important;
+    color: #222222 !important;
+  }
+
+  .food-dot {
+    font-size: 9px !important;
+    color: #222222 !important;
+  }
+
+  .food-item,
+  .food-table {
+    border-color: rgba(0, 0, 0, 0.20) !important;
+  }
+
+  .meal-content h2 {
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    color: #111111 !important;
+  }
+
+  .meal-label,
+  .meal-subtitle {
+    color: #222222 !important;
+  }
+}
+
+/* Keep 16px food text on very small phones too */
+@media (max-width: 400px) {
+  .food-name {
+    font-size: 16px !important;
+    line-height: 1.20 !important;
+  }
+}
+
+/* Dark mode: use a light color for contrast */
+@media (max-width: 700px) {
+  :root[data-theme="dark"] .food-name {
+    color: #fffaf4 !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65) !important;
+  }
+
+  :root[data-theme="dark"] .food-number,
+  :root[data-theme="dark"] .food-dot {
+    color: #e0d8d0 !important;
+  }
+}
+
+
+/* =========================================================
+   MESSMATE — UNIFIED BACKGROUND MEAL CARD
+   ---------------------------------------------------------
+   Desktop / laptop / tablet now use the same visual concept
+   as mobile:
+     IMAGE = full meal-card background
+     CONTENT = layered on top
+     FOOD TEXT = large + bold + dark in light mode
+
+   Existing page controls and meal colors are preserved.
+   ========================================================= */
+
+/* =========================================================
+   LAPTOP / DESKTOP
+   ========================================================= */
+
+@media (min-width: 701px) {
+
+  .meal-slider-wrapper {
+    padding: 18px 48px 42px !important;
+  }
+
+  .meal-slider {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 30px !important;
+  }
+
+  .meal-section,
+  .meal-section.morning,
+  .meal-section.afternoon,
+  .meal-section.evening,
+  .meal-section.night {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    min-height: 520px !important;
+    height: auto !important;
+    overflow: hidden !important;
+    grid-template-columns: none !important;
+  }
+
+  /* Full-card image background */
+  .meal-image-wrapper {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .meal-images {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    display: grid !important;
+    gap: 2px !important;
+  }
+
+  .meal-images.single-image {
+    grid-template-columns: 1fr !important;
+  }
+
+  .meal-images.multiple-images {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .meal-image,
+  .image-fallback {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: blur(6px) !important;
+    transform: scale(1.045) !important;
+  }
+
+  /* Preserve the existing meal color identity */
+  .meal-section::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .meal-section.morning::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 241, 223, 0.84),
+        rgba(255, 217, 179, 0.72)
+      ) !important;
+  }
+
+  .meal-section.afternoon::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(237, 248, 228, 0.84),
+        rgba(215, 239, 185, 0.72)
+      ) !important;
+  }
+
+  .meal-section.evening::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 230, 236, 0.84),
+        rgba(231, 216, 243, 0.72)
+      ) !important;
+  }
+
+  .meal-section.night::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(227, 233, 255, 0.84),
+        rgba(216, 215, 247, 0.72)
+      ) !important;
+  }
+
+  /* Content sits over the photograph */
+  .meal-content {
+    position: relative !important;
+    z-index: 3 !important;
+    width: 100% !important;
+    min-height: 520px !important;
+    height: auto !important;
+    padding: 34px 42px 48px !important;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    overflow: visible !important;
+  }
+
+  .meal-content::before {
+    display: none !important;
+  }
+
+  .meal-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.4px !important;
+    color: #222222 !important;
+  }
+
+  .meal-content h2 {
+    margin: 5px 0 5px !important;
+    font-size: 42px !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+    color: #111111 !important;
+    text-shadow: 0 1px 3px rgba(255,255,255,.5) !important;
+  }
+
+  .meal-subtitle {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #222222 !important;
+    margin-bottom: 18px !important;
+  }
+
+  /* Two-column food list like the existing laptop design */
+  .food-tables {
+    position: relative !important;
+    z-index: 4 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 28px !important;
+    width: 100% !important;
+    max-width: 900px !important;
+  }
+
+  .food-table {
+    min-width: 0 !important;
+    border-top: 1px solid rgba(0,0,0,.15) !important;
+  }
+
+  .food-item {
+    display: grid !important;
+    grid-template-columns: 28px 8px minmax(0,1fr) !important;
+    min-width: 0 !important;
+    padding: 10px 0 !important;
+    align-items: start !important;
+    border-bottom: 1px solid rgba(0,0,0,.13) !important;
+  }
+
+  .food-number {
+    font-size: 9px !important;
+    font-weight: 800 !important;
+    color: #333333 !important;
+  }
+
+  .food-dot {
+    font-size: 10px !important;
+    color: #333333 !important;
+  }
+
+  .food-name {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+    font-weight: 800 !important;
+    color: #111111 !important;
+    overflow-wrap: anywhere !important;
+    text-shadow: 0 1px 2px rgba(255,255,255,.45) !important;
+  }
+
+  .meal-arrow {
+    z-index: 15 !important;
+  }
+
+  .meal-dots,
+  .swipe-hint {
+    z-index: 16 !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+  .meal-slider-wrapper {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  .meal-section,
+  .meal-section.morning,
+  .meal-section.afternoon,
+  .meal-section.evening,
+  .meal-section.night,
+  .meal-content {
+    min-height: 480px !important;
+  }
+
+  .meal-content {
+    padding: 28px 30px 42px !important;
+  }
+
+  .meal-content h2 {
+    font-size: 36px !important;
+  }
+
+  .food-name {
+    font-size: 16px !important;
+  }
+
+  .food-tables {
+    gap: 18px !important;
+  }
+}
+
+
+/* =========================================================
+   DARK MODE — ALL SCREEN SIZES
+   ========================================================= */
+
+@media (min-width: 701px) {
+
+  :root[data-theme="dark"] .meal-section.morning::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(104,62,27,.80),
+        rgba(72,42,22,.88)
+      ) !important;
+  }
+
+  :root[data-theme="dark"] .meal-section.afternoon::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(35,76,40,.80),
+        rgba(25,57,30,.88)
+      ) !important;
+  }
+
+  :root[data-theme="dark"] .meal-section.evening::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(91,48,70,.80),
+        rgba(55,38,70,.88)
+      ) !important;
+  }
+
+  :root[data-theme="dark"] .meal-section.night::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(45,53,100,.80),
+        rgba(31,36,75,.88)
+      ) !important;
+  }
+
+  :root[data-theme="dark"] .meal-content h2,
+  :root[data-theme="dark"] .food-name {
+    color: #fffaf4 !important;
+    text-shadow: 0 2px 7px rgba(0,0,0,.6) !important;
+  }
+
+  :root[data-theme="dark"] .meal-label,
+  :root[data-theme="dark"] .meal-subtitle,
+  :root[data-theme="dark"] .food-number,
+  :root[data-theme="dark"] .food-dot {
+    color: #e0d8d0 !important;
+  }
+
+  :root[data-theme="dark"] .food-item,
+  :root[data-theme="dark"] .food-table {
+    border-color: rgba(255,255,255,.14) !important;
+  }
+}
